@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>harkx</title>
+    <link>https://harkx.com/</link>
+    <description>Recent content on harkx</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Feb 2015 19:26:59 +0100</lastBuildDate>
+    <atom:link href="https://harkx.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Go, build for a different architecture</title>
+      <link>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</link>
+      <pubDate>Mon, 23 Feb 2015 19:26:59 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</guid>
+      <description>
+
+&lt;p&gt;It happened that I needed to (re)build a small program for an i386 machine.
+This was about the same time I realized we still had those&amp;hellip;
+It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I wanted to document it.&lt;/p&gt;
+
+&lt;p&gt;First of all, build the correct Go compiler. I&amp;rsquo;m on (Ubuntu) amd64 and
+these instructions explain how to get the i386 build. (you can replace all (i)386 with amd64 to do the reverse..)&lt;/p&gt;
+
+&lt;h1 id=&#34;install-correct-libc6-dev:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Install correct libc6-dev&lt;/h1&gt;
+
+&lt;p&gt;This is not so hard: &lt;code&gt;sudo apt-get install libc6-dev-i386&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;build-go-for-i386:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Build Go for i386&lt;/h1&gt;
+
+&lt;p&gt;I&amp;rsquo;m assuming you did a binary install of
+&lt;a href=&#34;https://golang.org/dl/&#34; target=&#34;_blank&#34;&gt;golang&lt;/a&gt;, in that case you just
+need to find the make.bash script in the src dir like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;harkx:~$ cd /usr/local/go/src
+harkx:/usr/local/go/src$ sudo GOARCH=386 ./make.bash
+# Building C bootstrap tool.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When finished you&amp;rsquo;ll get something like this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Installed Go for linux/386 in /usr/local/go&lt;/p&gt;
+
+&lt;p&gt;Installed commands in /usr/local/go/bin&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;build-application:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Build application&lt;/h1&gt;
+
+&lt;p&gt;That&amp;rsquo;s it. Now you can build your application for i386 like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;harkx:~$ GOARCH=386 go build myapp.go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And look at the result:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;harkx:~$ file ./myapp
+./myapp: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;resources:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Resources:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.darkcoding.net/software/go-targeting-a-different-architecture/&#34; target=&#34;_blank&#34;&gt;
+Go: Targeting a different architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheets</title>
+      <link>https://harkx.com/blog/2015/02/12/cheat-sheets/</link>
+      <pubDate>Thu, 12 Feb 2015 19:40:47 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/12/cheat-sheets/</guid>
+      <description>&lt;p&gt;The homepage of &lt;strong&gt;&lt;a href=&#34;http://www.cheatography.com/&#34; target=&#34;_blank&#34;&gt;Cheatography&lt;/a&gt;&lt;/strong&gt; not only has a nice collection but you can also generate and share your own cheat sheets.&lt;/p&gt;
+
+&lt;p&gt;Some of my favorites:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/bechtold/cheat-sheets/tmux-the-terminal-multiplexer/&#34; target=&#34;_blank&#34;&gt;tmux&lt;/a&gt; - the best terminal multiplexer&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/richardjh/cheat-sheets/rsync/&#34; target=&#34;_blank&#34;&gt;rsync&lt;/a&gt; - a pretty long list&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/oguzkonya/cheat-sheets/bash/&#34; target=&#34;_blank&#34;&gt;bash&lt;/a&gt; - Bash Linux command line keyboard shortcuts&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/mishin/cheat-sheets/perlcheat/&#34; target=&#34;_blank&#34;&gt;perlcheat&lt;/a&gt; - for beginning Perl programmers&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/spaceduck/cheat-sheets/holidays-vacations/&#34; target=&#34;_blank&#34;&gt;holiday/vacations&lt;/a&gt; - enjoy your trip..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Useful git commands</title>
+      <link>https://harkx.com/blog/2015/02/11/useful-git-commands/</link>
+      <pubDate>Wed, 11 Feb 2015 21:30:00 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/11/useful-git-commands/</guid>
+      <description>
+
+&lt;p&gt;Here are some Git commands I frequently use, together with a short explanation.&lt;/p&gt;
+
+&lt;p&gt;Also, I don&amp;rsquo;t like to type long commands but I don&amp;rsquo;t mind &lt;strong&gt;fancy results&lt;/strong&gt;. No problem, aliases to the rescue!&lt;/p&gt;
+
+&lt;p&gt;And last (but not least) is a list of some fine Git resources.&lt;/p&gt;
+
+&lt;h2 id=&#34;git-reset:d07ca23090eccfe30798d518663065c1&#34;&gt;Git reset&lt;/h2&gt;
+
+&lt;p&gt;Reset uncommited changes and go back to HEAD. It discards all uncommitted changes! Be careful, potentially dangerous, this throws away all your uncommitted changes!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git reset --hard HEAD&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;git-commit-amend:d07ca23090eccfe30798d518663065c1&#34;&gt;Git commit (amend)&lt;/h2&gt;
+
+&lt;p&gt;If you forgot some changes in your last commit you can still fix this without creating a new commit. Just add your changes and redo the last commit with the &lt;em&gt;amend&lt;/em&gt; parameter, it will replace the last commit.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git commit --amend&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Watch out if you&amp;rsquo;ve already pushed to a remote repository, you might need to do a &lt;code&gt;git push -f&lt;/code&gt; so be careful, this might mess with other people&amp;rsquo;s repository.&lt;/p&gt;
+
+&lt;h2 id=&#34;colored-log-tree-view:d07ca23090eccfe30798d518663065c1&#34;&gt;Colored log tree view&lt;/h2&gt;
+
+&lt;p&gt;A cool command to view the Git log. Great because it uses color and displays branches in a tree format.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git log --oneline --all --graph --decorate --color&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;https://harkx.com/images/git/gitlog.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Example output git lg&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;h2 id=&#34;git-aliases:d07ca23090eccfe30798d518663065c1&#34;&gt;Git aliases&lt;/h2&gt;
+
+&lt;p&gt;You can put aliases in your .gitconfig file like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  [alias]
+          co = checkout
+          st = status
+          br = branch
+          df = diff
+          lg = log --oneline --all --graph --decorate --color
+          ls = log --oneline
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Easy! From now on you can use &lt;code&gt;git lg&lt;/code&gt; to get that cool view of the git log.
+  &lt;br&gt;Or &lt;code&gt;git df &amp;lt;filename&amp;gt;&lt;/code&gt; to view the diff of a specific file.&lt;/p&gt;
+
+&lt;h2 id=&#34;git-resources:d07ca23090eccfe30798d518663065c1&#34;&gt;Git resources&lt;/h2&gt;
+
+&lt;p&gt;Some Git resources I used and liked&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.git-tower.com/blog/&#34; target=&#34;_blank&#34;&gt;Tower blog&lt;/a&gt; (excellent information and great e-book)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gitref.org/&#34; target=&#34;_blank&#34;&gt;Git Reference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.git-tower.com/blog/git-cheat-sheet/&#34; target=&#34;_blank&#34;&gt;Git Cheat Sheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kernel.org/pub/software/scm/git/docs/everyday.html&#34; target=&#34;_blank&#34;&gt;Everyday GIT With 20 Commands Or So&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://isis.apache.org/contributors/git-cookbook.html&#34; target=&#34;_blank&#34;&gt;Git cookbook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://orga.cat/posts/most-useful-git-commands&#34; target=&#34;_blank&#34;&gt;The most useful git commands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://zackperdue.com/tutorials/super-useful-need-to-know-git-commands&#34; target=&#34;_blank&#34;&gt;Super Useful Need To Know Git Commands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.atlassian.com/git/tutorials/rewriting-history&#34; target=&#34;_blank&#34;&gt;Rewriting history&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>First post with Hugo</title>
+      <link>https://harkx.com/blog/2015/02/08/first-post-with-hugo/</link>
+      <pubDate>Sun, 08 Feb 2015 19:00:00 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/08/first-post-with-hugo/</guid>
+      <description>&lt;p&gt;I was a little &lt;em&gt;bored&lt;/em&gt; with the previous look and decided to play around with some other static HTML generators. I did like that I could edit the website directly in GitHub but I still decided to move away from the current setup with &amp;ldquo;Jekyll Now&amp;rdquo;. It&amp;rsquo;s more fun to edit files in &lt;a href=&#34;https://atom.io/&#34; target=&#34;_blank&#34;&gt;atom&lt;/a&gt; anyway.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been playing with &lt;a href=&#34;https://golang.org/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Go&lt;/strong&gt;&lt;/a&gt; lately and decided to look for a static HTML generator in Go. That was when I met &lt;a href=&#34;http://gohugo.io/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/a&gt;, described as &amp;ldquo;A Fast &amp;amp; Modern Static Website Engine&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Why Hugo? It&amp;rsquo;s (really) fast and written in Go. This also means it&amp;rsquo;s multi-platform and has no dependencies. Just like me! (the multi-platform that is)&lt;/p&gt;
+
+&lt;p&gt;There are no default themes so I decided to go with &lt;a href=&#34;https://github.com/zyro/hyde-x&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Hyde-X&lt;/strong&gt;&lt;/a&gt;, an enhanced port of the Jekyll &lt;em&gt;&amp;ldquo;Hyde&amp;rdquo;&lt;/em&gt; theme.&lt;/p&gt;
+
+&lt;p&gt;To summarize, let&amp;rsquo;s see what we have now:
+&lt;ul&gt;
+&lt;li&gt; The Hugo Go application (a 12 megabyte binary).
+&lt;li&gt; Markdown format for the content. (or HTML where needed)
+&lt;li&gt; GitHub hosting.
+&lt;li&gt; Static HTML. (=fast)
+&lt;li&gt; Mobile ready website.
+&lt;li&gt; Fast and multi-platform engine.
+&lt;li&gt; Two GitHub repositories, one for the Hugo code and one for the static HTML files.
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://harkx.com/license/</link>
+      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://harkx.com/license/</guid>
+      <description>
+
+&lt;h3 id=&#34;content-license:53e892b8b41cc4caece1cfd5ef21d6e7&#34;&gt;Content license&lt;/h3&gt;
+
+&lt;p&gt;All non-code blog content is licensed under &lt;a href=&#34;https://creativecommons.org/licenses/by-sa/4.0/&#34; target=&#34;_blank&#34;&gt;Creative Commons BY-SA 4.0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;code-license:53e892b8b41cc4caece1cfd5ef21d6e7&#34;&gt;Code license&lt;/h3&gt;
+
+&lt;p&gt;All source code files and snippets found on this blog, unless otherwise explicitly noted, are licensed under the terms below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;Copyright 2015 Kristof Hardy
+
+Licensed under the Apache License, Version 2.0 (the &amp;quot;License&amp;quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &amp;quot;AS IS&amp;quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#links</title>
+      <link>https://harkx.com/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://harkx.com/links/</guid>
+      <description>
+
+&lt;h3 id=&#34;a-collection-of-some-of-my-frequently-used-links:424069113a08a4256349764ee38dbbbf&#34;&gt;A collection of (some of) my frequently used links.&lt;/h3&gt;
+
+&lt;h1 id=&#34;dns:424069113a08a4256349764ee38dbbbf&#34;&gt;DNS&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.intodns.com/&#34; target=&#34;_blank&#34;&gt;intoDNS&lt;/a&gt; - Check DNS health&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://w3dt.net/&#34; target=&#34;_blank&#34;&gt;World Wide Web Domain Tools by ITOC Australia&lt;/a&gt; - DNS and Web tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;linux:424069113a08a4256349764ee38dbbbf&#34;&gt;Linux&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;ftp://cdimage.debian.org/cdimage/archive/&#34; target=&#34;_blank&#34;&gt;Debian CD Image Archive&lt;/a&gt; - Where the older CD/DVD releases of Debian are stored.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://planet.debian.org/&#34; target=&#34;_blank&#34;&gt;Planet Debian&lt;/a&gt; - Planet Debian&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.mechanicalkeys.com/files/os/notes/tm.html&#34; target=&#34;_blank&#34;&gt;tmux and screen cheatsheet&lt;/a&gt; - A screen and tmux cheatsheet&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gist.github.com/MohamedAlaa/2961058&#34; target=&#34;_blank&#34;&gt;tmux cheatsheet&lt;/a&gt; - tmux cheatsheet&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://robots.thoughtbot.com/a-tmux-crash-course&#34; target=&#34;_blank&#34;&gt;tmux Crash Course&lt;/a&gt; tmux Crash course&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;security:424069113a08a4256349764ee38dbbbf&#34;&gt;Security&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://letsencrypt.org/&#34; target=&#34;_blank&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/a&gt; - Certificate Authority for your SSL needs: free, automated and open!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/&#34; target=&#34;_blank&#34;&gt;Hardening Your Web Server’s SSL Ciphers&lt;/a&gt; - A must read on SSL for your website&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;sysadmin:424069113a08a4256349764ee38dbbbf&#34;&gt;Sysadmin&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://blackmanticore.com/&#34; target=&#34;_blank&#34;&gt;Black Manticore&lt;/a&gt; - Technical and sysadmin related blog&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.diffchecker.com/&#34; target=&#34;_blank&#34;&gt;Diff Checker&lt;/a&gt; - Online diff tool to compare text differences&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://mailheader.mattiasgeniar.be/&#34; target=&#34;_blank&#34;&gt;Extended Mail Header Parser&lt;/a&gt; - Readability in your mail headers&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.adobe.com/products/flashplayer/distribution3.html&#34; target=&#34;_blank&#34;&gt;Flash Player full installers&lt;/a&gt; - Flash Player full installers (including MSI)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://support.google.com/a/?hl=en&#34; target=&#34;_blank&#34;&gt;Google Apps Support Center&lt;/a&gt; - Google Apps Support Center&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://toolbox.googleapps.com/apps/main/&#34; target=&#34;_blank&#34;&gt;Google Apps Toolbox&lt;/a&gt; - Analyze SMTP message headers, Check MX records and more&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://lnav.org/&#34; target=&#34;_blank&#34;&gt;LNAV&lt;/a&gt; - The Log File Navigator, An advanced log file viewer for the small-scale&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://packetlife.net/library/cheat-sheets/&#34; target=&#34;_blank&#34;&gt;Networking Cheat Sheets&lt;/a&gt; - Networking Cheat Sheets&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights&#34; target=&#34;_blank&#34;&gt;PageSpeed Insights&lt;/a&gt; - PageSpeed Insights analyzes the content of a web page, then generates suggestions to make that page faster. Reducing page load times can reduce bounce rates and increase conversion rates.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.regexr.com/&#34; target=&#34;_blank&#34;&gt;RegExrv2.0&lt;/a&gt; - RegExr is an online tool to learn, build, &amp;amp; test Regular Expressions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;vmware:424069113a08a4256349764ee38dbbbf&#34;&gt;VMware&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.virten.net/vmware/esxi-release-build-number-history/&#34; target=&#34;_blank&#34;&gt;Virten.net&lt;/a&gt; - VMware ESXi Release and Build Number History&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.virtuallyghetto.com/&#34; target=&#34;_blank&#34;&gt;virtuallyGhetto&lt;/a&gt; - VMware Scripts &amp;amp; Resources&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;windows:424069113a08a4256349764ee38dbbbf&#34;&gt;Windows&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://toolslib.net/downloads/viewdownload/1-adwcleaner/&#34; target=&#34;_blank&#34;&gt;AdwCleaner&lt;/a&gt; - Adware Cleaner&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gpsearch.azurewebsites.net/&#34; target=&#34;_blank&#34;&gt;Group Policy Search&lt;/a&gt; - GPO Search&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.magicaljellybean.com/keyfinder/&#34; target=&#34;_blank&#34;&gt;Jelly Bean Keyfinder&lt;/a&gt;- Keyfinder to retrieve Product Keys&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.microsoft.com/en-us/windows/enterprise/resources-and-tools/default.aspx&#34; target=&#34;_blank&#34;&gt;Windows Enterprise Resources and tools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;work:424069113a08a4256349764ee38dbbbf&#34;&gt;Work&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://technet.microsoft.com/en-us/library/exchange-online-service-description.aspx&#34; target=&#34;_blank&#34;&gt;Exchange Online Service Description&lt;/a&gt; - Office 365 Service Description&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://multirbl.valli.org/lookup/&#34; target=&#34;_blank&#34;&gt;Multi-RBL lookup&lt;/a&gt; - Great Multi-RBL IP blacklist lookup tool!&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://portal.microsoftonline.com/&#34; target=&#34;_blank&#34;&gt;Office 365 Portal&lt;/a&gt; - Office 365 Portal&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.testexchangeconnectivity.com/&#34; target=&#34;_blank&#34;&gt;Test Exchange Connectivity&lt;/a&gt; -&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.yellow-bricks.com/&#34; target=&#34;_blank&#34;&gt;Yellow Bricks&lt;/a&gt; - Personal Blog about virtualization&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#whoami</title>
+      <link>https://harkx.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://harkx.com/about/</guid>
+      <description>
+
+&lt;p&gt;I am &lt;strong&gt;Kristof Hardy&lt;/strong&gt;. Passionate about travel, information technology and &lt;a title=&#34;Automation&#34; href=&#34;http://en.wikipedia.org/wiki/Automation&#34; target=&#34;_blank&#34;&gt;automation&lt;/a&gt; in all its aspects, living in the eastern part of &lt;a title=&#34;Flemish Brabant&#34; href=&#34;http://en.wikipedia.org/wiki/Flemish_Brabant&#34; target=&#34;_blank&#34;&gt;Flemish Brabant&lt;/a&gt; in Belgium.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.catsanddogs.com&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://harkx.com/images/cad_logo.png&#34; height=160 align=right&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m working at &lt;a href=&#34;http://www.catsanddogs.com/&#34; target=&#34;_blank&#34;&gt;Cats&amp;amp;Dogs&lt;/a&gt; as an IT specialist. Some of my specialties include (but are not limited to): &lt;a href=&#34;http://en.wikipedia.org/wiki/Getting_Things_Done&#34; target=&#34;_blank&#34;&gt;GTD&lt;/a&gt;, &lt;strong&gt;Linux&lt;/strong&gt;, web based environments, &lt;strong&gt;monitoring&lt;/strong&gt;, VMware, &lt;strong&gt;networking&lt;/strong&gt;, Windows, DNS, ..&lt;/p&gt;
+
+&lt;p&gt;Some of the things I&amp;rsquo;m working with:
+&lt;ul&gt;
+  &lt;li&gt;Odoo
+  &lt;li&gt;SaltStack
+  &lt;li&gt;x2go
+  &lt;li&gt;Git
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;contact-me:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Contact me&lt;/h3&gt;
+
+&lt;p&gt;You can find me on &lt;a title=&#34;twitter&#34; href=&#34;http://twitter.com/harkx&#34; target=&#34;_blank&#34;&gt;Twitter&lt;/a&gt; and &lt;a title=&#34;Linkedin&#34; href=&#34;http://be.linkedin.com/in/kristofhardy&#34; target=&#34;_blank&#34;&gt;Linkedin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Or use this form:&lt;/p&gt;
+
+&lt;form method=&#34;POST&#34; action=&#34;https://formspree.io/kristof@harkx.com&#34;&gt;
+ &lt;div&gt;
+  &lt;label for=&#34;inputemail&#34;&gt;Email address: &lt;/label&gt;&lt;br /&gt;
+  &lt;input id=&#34;inputemail&#34; type=&#34;email&#34; name=&#34;_replyto&#34; placeholder=&#34;Enter email&#34;&gt;&lt;/input&gt;
+ &lt;/div&gt;
+ &lt;div&gt;
+  &lt;label for=&#34;textarea&#34;&gt;Message: &lt;/label&gt;&lt;br /&gt;
+  &lt;textarea name=&#34;body&#34; id=&#34;textarea&#34; rows=&#34;5&#34; placeholder=&#34;Enter message&#34;&gt;&lt;/textarea&gt;
+ &lt;/div&gt;
+ &lt;button type=&#34;submit&#34; value=&#34;Send&#34;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;p&gt;(form is provided by &lt;a href=&#34;http://formspree.io/&#34; target=&#34;_blank&#34;&gt;Formspree&lt;/a&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

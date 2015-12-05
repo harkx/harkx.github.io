@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Useful git commands &middot; @harkx</title>
+
+  
+  <link rel="stylesheet" href="https://harkx.com/css/poole.css">
+  <link rel="stylesheet" href="https://harkx.com/css/hyde.css">
+  <link rel="stylesheet" href="https://harkx.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="https://harkx.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="https://harkx.com/css/hyde-x.css">
+  <link rel="stylesheet" href="https://harkx.com/css/highlight/sunburst.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://harkx.com/touch-icon-144-precomposed.png">
+  <link href="https://harkx.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Git commands that can be used in real life.. Practical Git advice and cheat sheet &#43; resources.">
+  <meta name="keywords" content="harkx,blog,technology,it,linux">
+  <link rel="author" href="http://plus.google.com/104498694078376935988">
+</head>
+<body class="theme-base-08dark">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>@harkx</h1>
+      <p class="lead">T(ech) &amp; T(ravel)</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="https://harkx.com/">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="https://harkx.com/links/">#links</a></li>
+      
+      <li class="sidebar-nav-item"><a href="https://harkx.com/about/">#whoami</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/harkx"><i class="fa fa-github-square fa-3x"></i></a>
+      <a href="https://bitbucket.org/harkx"><i class="fa fa-bitbucket-square fa-3x"></i></a>
+      
+      <a href="http://be.linkedin.com/in/kristofhardy"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="https://twitter.com/harkx"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2015 <a href="https://harkx.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>Useful git commands</h1>
+    <span class="post-date">Feb 11, 2015 &middot; 2 minute read &middot; <a href="https://harkx.com/blog/2015/02/11/useful-git-commands/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="https://harkx.com/categories/git">git</a>
+    </span>
+    
+
+<p>Here are some Git commands I frequently use, together with a short explanation.</p>
+
+<p>Also, I don&rsquo;t like to type long commands but I don&rsquo;t mind <strong>fancy results</strong>. No problem, aliases to the rescue!</p>
+
+<p>And last (but not least) is a list of some fine Git resources.</p>
+
+<h2 id="git-reset:d07ca23090eccfe30798d518663065c1">Git reset</h2>
+
+<p>Reset uncommited changes and go back to HEAD. It discards all uncommitted changes! Be careful, potentially dangerous, this throws away all your uncommitted changes!</p>
+
+<ul>
+<li><code>git reset --hard HEAD</code></li>
+</ul>
+
+<h2 id="git-commit-amend:d07ca23090eccfe30798d518663065c1">Git commit (amend)</h2>
+
+<p>If you forgot some changes in your last commit you can still fix this without creating a new commit. Just add your changes and redo the last commit with the <em>amend</em> parameter, it will replace the last commit.</p>
+
+<ul>
+<li><code>git commit --amend</code></li>
+</ul>
+
+<p>Watch out if you&rsquo;ve already pushed to a remote repository, you might need to do a <code>git push -f</code> so be careful, this might mess with other people&rsquo;s repository.</p>
+
+<h2 id="colored-log-tree-view:d07ca23090eccfe30798d518663065c1">Colored log tree view</h2>
+
+<p>A cool command to view the Git log. Great because it uses color and displays branches in a tree format.</p>
+
+<ul>
+<li><code>git log --oneline --all --graph --decorate --color</code></li>
+</ul>
+
+
+<figure >
+    
+        <img src="/images/git/gitlog.png" />
+    
+    
+    <figcaption>
+        <h4>Example output git lg</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<h2 id="git-aliases:d07ca23090eccfe30798d518663065c1">Git aliases</h2>
+
+<p>You can put aliases in your .gitconfig file like this:</p>
+
+<pre><code>  [alias]
+          co = checkout
+          st = status
+          br = branch
+          df = diff
+          lg = log --oneline --all --graph --decorate --color
+          ls = log --oneline
+</code></pre>
+
+<p>Easy! From now on you can use <code>git lg</code> to get that cool view of the git log.
+  <br>Or <code>git df &lt;filename&gt;</code> to view the diff of a specific file.</p>
+
+<h2 id="git-resources:d07ca23090eccfe30798d518663065c1">Git resources</h2>
+
+<p>Some Git resources I used and liked</p>
+
+<ul>
+<li><a href="http://www.git-tower.com/blog/" target="_blank">Tower blog</a> (excellent information and great e-book)</li>
+<li><a href="http://gitref.org/" target="_blank">Git Reference</a></li>
+<li><a href="http://www.git-tower.com/blog/git-cheat-sheet/" target="_blank">Git Cheat Sheet</a></li>
+<li><a href="https://www.kernel.org/pub/software/scm/git/docs/everyday.html" target="_blank">Everyday GIT With 20 Commands Or So</a></li>
+<li><a href="http://isis.apache.org/contributors/git-cookbook.html" target="_blank">Git cookbook</a></li>
+<li><a href="http://orga.cat/posts/most-useful-git-commands" target="_blank">The most useful git commands</a></li>
+<li><a href="http://zackperdue.com/tutorials/super-useful-need-to-know-git-commands" target="_blank">Super Useful Need To Know Git Commands</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/rewriting-history" target="_blank">Rewriting history</a></li>
+</ul>
+
+<hr>
+
+<p><em><p align=right>written by @harkx</p></em></p>
+
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "harkx";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "harkx";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="https://harkx.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-54333082-2'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
+

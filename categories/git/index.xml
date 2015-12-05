@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on harkx</title>
+    <link>https://harkx.com/categories/git/</link>
+    <description>Recent content in Git on harkx</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Feb 2015 21:30:00 +0100</lastBuildDate>
+    <atom:link href="https://harkx.com/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Useful git commands</title>
+      <link>https://harkx.com/blog/2015/02/11/useful-git-commands/</link>
+      <pubDate>Wed, 11 Feb 2015 21:30:00 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/11/useful-git-commands/</guid>
+      <description>
+
+&lt;p&gt;Here are some Git commands I frequently use, together with a short explanation.&lt;/p&gt;
+
+&lt;p&gt;Also, I don&amp;rsquo;t like to type long commands but I don&amp;rsquo;t mind &lt;strong&gt;fancy results&lt;/strong&gt;. No problem, aliases to the rescue!&lt;/p&gt;
+
+&lt;p&gt;And last (but not least) is a list of some fine Git resources.&lt;/p&gt;
+
+&lt;h2 id=&#34;git-reset:d07ca23090eccfe30798d518663065c1&#34;&gt;Git reset&lt;/h2&gt;
+
+&lt;p&gt;Reset uncommited changes and go back to HEAD. It discards all uncommitted changes! Be careful, potentially dangerous, this throws away all your uncommitted changes!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git reset --hard HEAD&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;git-commit-amend:d07ca23090eccfe30798d518663065c1&#34;&gt;Git commit (amend)&lt;/h2&gt;
+
+&lt;p&gt;If you forgot some changes in your last commit you can still fix this without creating a new commit. Just add your changes and redo the last commit with the &lt;em&gt;amend&lt;/em&gt; parameter, it will replace the last commit.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git commit --amend&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Watch out if you&amp;rsquo;ve already pushed to a remote repository, you might need to do a &lt;code&gt;git push -f&lt;/code&gt; so be careful, this might mess with other people&amp;rsquo;s repository.&lt;/p&gt;
+
+&lt;h2 id=&#34;colored-log-tree-view:d07ca23090eccfe30798d518663065c1&#34;&gt;Colored log tree view&lt;/h2&gt;
+
+&lt;p&gt;A cool command to view the Git log. Great because it uses color and displays branches in a tree format.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git log --oneline --all --graph --decorate --color&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;https://harkx.com/images/git/gitlog.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Example output git lg&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;h2 id=&#34;git-aliases:d07ca23090eccfe30798d518663065c1&#34;&gt;Git aliases&lt;/h2&gt;
+
+&lt;p&gt;You can put aliases in your .gitconfig file like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  [alias]
+          co = checkout
+          st = status
+          br = branch
+          df = diff
+          lg = log --oneline --all --graph --decorate --color
+          ls = log --oneline
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Easy! From now on you can use &lt;code&gt;git lg&lt;/code&gt; to get that cool view of the git log.
+  &lt;br&gt;Or &lt;code&gt;git df &amp;lt;filename&amp;gt;&lt;/code&gt; to view the diff of a specific file.&lt;/p&gt;
+
+&lt;h2 id=&#34;git-resources:d07ca23090eccfe30798d518663065c1&#34;&gt;Git resources&lt;/h2&gt;
+
+&lt;p&gt;Some Git resources I used and liked&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.git-tower.com/blog/&#34; target=&#34;_blank&#34;&gt;Tower blog&lt;/a&gt; (excellent information and great e-book)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gitref.org/&#34; target=&#34;_blank&#34;&gt;Git Reference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.git-tower.com/blog/git-cheat-sheet/&#34; target=&#34;_blank&#34;&gt;Git Cheat Sheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kernel.org/pub/software/scm/git/docs/everyday.html&#34; target=&#34;_blank&#34;&gt;Everyday GIT With 20 Commands Or So&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://isis.apache.org/contributors/git-cookbook.html&#34; target=&#34;_blank&#34;&gt;Git cookbook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://orga.cat/posts/most-useful-git-commands&#34; target=&#34;_blank&#34;&gt;The most useful git commands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://zackperdue.com/tutorials/super-useful-need-to-know-git-commands&#34; target=&#34;_blank&#34;&gt;Super Useful Need To Know Git Commands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.atlassian.com/git/tutorials/rewriting-history&#34; target=&#34;_blank&#34;&gt;Rewriting history&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

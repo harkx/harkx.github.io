@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation on harkx</title>
+    <link>https://harkx.com/categories/documentation/</link>
+    <description>Recent content in Documentation on harkx</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Feb 2015 19:40:47 +0100</lastBuildDate>
+    <atom:link href="https://harkx.com/categories/documentation/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cheat Sheets</title>
+      <link>https://harkx.com/blog/2015/02/12/cheat-sheets/</link>
+      <pubDate>Thu, 12 Feb 2015 19:40:47 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/12/cheat-sheets/</guid>
+      <description>&lt;p&gt;The homepage of &lt;strong&gt;&lt;a href=&#34;http://www.cheatography.com/&#34; target=&#34;_blank&#34;&gt;Cheatography&lt;/a&gt;&lt;/strong&gt; not only has a nice collection but you can also generate and share your own cheat sheets.&lt;/p&gt;
+
+&lt;p&gt;Some of my favorites:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/bechtold/cheat-sheets/tmux-the-terminal-multiplexer/&#34; target=&#34;_blank&#34;&gt;tmux&lt;/a&gt; - the best terminal multiplexer&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/richardjh/cheat-sheets/rsync/&#34; target=&#34;_blank&#34;&gt;rsync&lt;/a&gt; - a pretty long list&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/oguzkonya/cheat-sheets/bash/&#34; target=&#34;_blank&#34;&gt;bash&lt;/a&gt; - Bash Linux command line keyboard shortcuts&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/mishin/cheat-sheets/perlcheat/&#34; target=&#34;_blank&#34;&gt;perlcheat&lt;/a&gt; - for beginning Perl programmers&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/spaceduck/cheat-sheets/holidays-vacations/&#34; target=&#34;_blank&#34;&gt;holiday/vacations&lt;/a&gt; - enjoy your trip..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

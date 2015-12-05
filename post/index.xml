@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on harkx</title>
+    <link>https://harkx.com/post/</link>
+    <description>Recent content in Posts on harkx</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Feb 2015 19:26:59 +0100</lastBuildDate>
+    <atom:link href="https://harkx.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Go, build for a different architecture</title>
+      <link>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</link>
+      <pubDate>Mon, 23 Feb 2015 19:26:59 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</guid>
+      <description>
+
+&lt;p&gt;It happened that I needed to (re)build a small program for an i386 machine.
+This was about the same time I realized we still had those&amp;hellip;
+It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I wanted to document it.&lt;/p&gt;
+
+&lt;p&gt;First of all, build the correct Go compiler. I&amp;rsquo;m on (Ubuntu) amd64 and
+these instructions explain how to get the i386 build. (you can replace all (i)386 with amd64 to do the reverse..)&lt;/p&gt;
+
+&lt;h1 id=&#34;install-correct-libc6-dev:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Install correct libc6-dev&lt;/h1&gt;
+
+&lt;p&gt;This is not so hard: &lt;code&gt;sudo apt-get install libc6-dev-i386&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;build-go-for-i386:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Build Go for i386&lt;/h1&gt;
+
+&lt;p&gt;I&amp;rsquo;m assuming you did a binary install of
+&lt;a href=&#34;https://golang.org/dl/&#34; target=&#34;_blank&#34;&gt;golang&lt;/a&gt;, in that case you just
+need to find the make.bash script in the src dir like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;harkx:~$ cd /usr/local/go/src
+harkx:/usr/local/go/src$ sudo GOARCH=386 ./make.bash
+# Building C bootstrap tool.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When finished you&amp;rsquo;ll get something like this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Installed Go for linux/386 in /usr/local/go&lt;/p&gt;
+
+&lt;p&gt;Installed commands in /usr/local/go/bin&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;build-application:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Build application&lt;/h1&gt;
+
+&lt;p&gt;That&amp;rsquo;s it. Now you can build your application for i386 like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;harkx:~$ GOARCH=386 go build myapp.go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And look at the result:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;harkx:~$ file ./myapp
+./myapp: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;resources:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Resources:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.darkcoding.net/software/go-targeting-a-different-architecture/&#34; target=&#34;_blank&#34;&gt;
+Go: Targeting a different architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheets</title>
+      <link>https://harkx.com/blog/2015/02/12/cheat-sheets/</link>
+      <pubDate>Thu, 12 Feb 2015 19:40:47 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/12/cheat-sheets/</guid>
+      <description>&lt;p&gt;The homepage of &lt;strong&gt;&lt;a href=&#34;http://www.cheatography.com/&#34; target=&#34;_blank&#34;&gt;Cheatography&lt;/a&gt;&lt;/strong&gt; not only has a nice collection but you can also generate and share your own cheat sheets.&lt;/p&gt;
+
+&lt;p&gt;Some of my favorites:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/bechtold/cheat-sheets/tmux-the-terminal-multiplexer/&#34; target=&#34;_blank&#34;&gt;tmux&lt;/a&gt; - the best terminal multiplexer&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/richardjh/cheat-sheets/rsync/&#34; target=&#34;_blank&#34;&gt;rsync&lt;/a&gt; - a pretty long list&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/oguzkonya/cheat-sheets/bash/&#34; target=&#34;_blank&#34;&gt;bash&lt;/a&gt; - Bash Linux command line keyboard shortcuts&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/mishin/cheat-sheets/perlcheat/&#34; target=&#34;_blank&#34;&gt;perlcheat&lt;/a&gt; - for beginning Perl programmers&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/spaceduck/cheat-sheets/holidays-vacations/&#34; target=&#34;_blank&#34;&gt;holiday/vacations&lt;/a&gt; - enjoy your trip..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Useful git commands</title>
+      <link>https://harkx.com/blog/2015/02/11/useful-git-commands/</link>
+      <pubDate>Wed, 11 Feb 2015 21:30:00 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/11/useful-git-commands/</guid>
+      <description>
+
+&lt;p&gt;Here are some Git commands I frequently use, together with a short explanation.&lt;/p&gt;
+
+&lt;p&gt;Also, I don&amp;rsquo;t like to type long commands but I don&amp;rsquo;t mind &lt;strong&gt;fancy results&lt;/strong&gt;. No problem, aliases to the rescue!&lt;/p&gt;
+
+&lt;p&gt;And last (but not least) is a list of some fine Git resources.&lt;/p&gt;
+
+&lt;h2 id=&#34;git-reset:d07ca23090eccfe30798d518663065c1&#34;&gt;Git reset&lt;/h2&gt;
+
+&lt;p&gt;Reset uncommited changes and go back to HEAD. It discards all uncommitted changes! Be careful, potentially dangerous, this throws away all your uncommitted changes!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git reset --hard HEAD&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;git-commit-amend:d07ca23090eccfe30798d518663065c1&#34;&gt;Git commit (amend)&lt;/h2&gt;
+
+&lt;p&gt;If you forgot some changes in your last commit you can still fix this without creating a new commit. Just add your changes and redo the last commit with the &lt;em&gt;amend&lt;/em&gt; parameter, it will replace the last commit.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git commit --amend&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Watch out if you&amp;rsquo;ve already pushed to a remote repository, you might need to do a &lt;code&gt;git push -f&lt;/code&gt; so be careful, this might mess with other people&amp;rsquo;s repository.&lt;/p&gt;
+
+&lt;h2 id=&#34;colored-log-tree-view:d07ca23090eccfe30798d518663065c1&#34;&gt;Colored log tree view&lt;/h2&gt;
+
+&lt;p&gt;A cool command to view the Git log. Great because it uses color and displays branches in a tree format.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git log --oneline --all --graph --decorate --color&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;https://harkx.com/images/git/gitlog.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Example output git lg&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+&lt;h2 id=&#34;git-aliases:d07ca23090eccfe30798d518663065c1&#34;&gt;Git aliases&lt;/h2&gt;
+
+&lt;p&gt;You can put aliases in your .gitconfig file like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  [alias]
+          co = checkout
+          st = status
+          br = branch
+          df = diff
+          lg = log --oneline --all --graph --decorate --color
+          ls = log --oneline
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Easy! From now on you can use &lt;code&gt;git lg&lt;/code&gt; to get that cool view of the git log.
+  &lt;br&gt;Or &lt;code&gt;git df &amp;lt;filename&amp;gt;&lt;/code&gt; to view the diff of a specific file.&lt;/p&gt;
+
+&lt;h2 id=&#34;git-resources:d07ca23090eccfe30798d518663065c1&#34;&gt;Git resources&lt;/h2&gt;
+
+&lt;p&gt;Some Git resources I used and liked&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.git-tower.com/blog/&#34; target=&#34;_blank&#34;&gt;Tower blog&lt;/a&gt; (excellent information and great e-book)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gitref.org/&#34; target=&#34;_blank&#34;&gt;Git Reference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.git-tower.com/blog/git-cheat-sheet/&#34; target=&#34;_blank&#34;&gt;Git Cheat Sheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kernel.org/pub/software/scm/git/docs/everyday.html&#34; target=&#34;_blank&#34;&gt;Everyday GIT With 20 Commands Or So&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://isis.apache.org/contributors/git-cookbook.html&#34; target=&#34;_blank&#34;&gt;Git cookbook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://orga.cat/posts/most-useful-git-commands&#34; target=&#34;_blank&#34;&gt;The most useful git commands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://zackperdue.com/tutorials/super-useful-need-to-know-git-commands&#34; target=&#34;_blank&#34;&gt;Super Useful Need To Know Git Commands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.atlassian.com/git/tutorials/rewriting-history&#34; target=&#34;_blank&#34;&gt;Rewriting history&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>First post with Hugo</title>
+      <link>https://harkx.com/blog/2015/02/08/first-post-with-hugo/</link>
+      <pubDate>Sun, 08 Feb 2015 19:00:00 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/08/first-post-with-hugo/</guid>
+      <description>&lt;p&gt;I was a little &lt;em&gt;bored&lt;/em&gt; with the previous look and decided to play around with some other static HTML generators. I did like that I could edit the website directly in GitHub but I still decided to move away from the current setup with &amp;ldquo;Jekyll Now&amp;rdquo;. It&amp;rsquo;s more fun to edit files in &lt;a href=&#34;https://atom.io/&#34; target=&#34;_blank&#34;&gt;atom&lt;/a&gt; anyway.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been playing with &lt;a href=&#34;https://golang.org/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Go&lt;/strong&gt;&lt;/a&gt; lately and decided to look for a static HTML generator in Go. That was when I met &lt;a href=&#34;http://gohugo.io/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/a&gt;, described as &amp;ldquo;A Fast &amp;amp; Modern Static Website Engine&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Why Hugo? It&amp;rsquo;s (really) fast and written in Go. This also means it&amp;rsquo;s multi-platform and has no dependencies. Just like me! (the multi-platform that is)&lt;/p&gt;
+
+&lt;p&gt;There are no default themes so I decided to go with &lt;a href=&#34;https://github.com/zyro/hyde-x&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Hyde-X&lt;/strong&gt;&lt;/a&gt;, an enhanced port of the Jekyll &lt;em&gt;&amp;ldquo;Hyde&amp;rdquo;&lt;/em&gt; theme.&lt;/p&gt;
+
+&lt;p&gt;To summarize, let&amp;rsquo;s see what we have now:
+&lt;ul&gt;
+&lt;li&gt; The Hugo Go application (a 12 megabyte binary).
+&lt;li&gt; Markdown format for the content. (or HTML where needed)
+&lt;li&gt; GitHub hosting.
+&lt;li&gt; Static HTML. (=fast)
+&lt;li&gt; Mobile ready website.
+&lt;li&gt; Fast and multi-platform engine.
+&lt;li&gt; Two GitHub repositories, one for the Hugo code and one for the static HTML files.
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

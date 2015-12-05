@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on harkx</title>
+    <link>https://harkx.com/categories/golang/</link>
+    <description>Recent content in Golang on harkx</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Feb 2015 19:26:59 +0100</lastBuildDate>
+    <atom:link href="https://harkx.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Go, build for a different architecture</title>
+      <link>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</link>
+      <pubDate>Mon, 23 Feb 2015 19:26:59 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</guid>
+      <description>
+
+&lt;p&gt;It happened that I needed to (re)build a small program for an i386 machine.
+This was about the same time I realized we still had those&amp;hellip;
+It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I wanted to document it.&lt;/p&gt;
+
+&lt;p&gt;First of all, build the correct Go compiler. I&amp;rsquo;m on (Ubuntu) amd64 and
+these instructions explain how to get the i386 build. (you can replace all (i)386 with amd64 to do the reverse..)&lt;/p&gt;
+
+&lt;h1 id=&#34;install-correct-libc6-dev:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Install correct libc6-dev&lt;/h1&gt;
+
+&lt;p&gt;This is not so hard: &lt;code&gt;sudo apt-get install libc6-dev-i386&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;build-go-for-i386:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Build Go for i386&lt;/h1&gt;
+
+&lt;p&gt;I&amp;rsquo;m assuming you did a binary install of
+&lt;a href=&#34;https://golang.org/dl/&#34; target=&#34;_blank&#34;&gt;golang&lt;/a&gt;, in that case you just
+need to find the make.bash script in the src dir like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;harkx:~$ cd /usr/local/go/src
+harkx:/usr/local/go/src$ sudo GOARCH=386 ./make.bash
+# Building C bootstrap tool.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When finished you&amp;rsquo;ll get something like this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Installed Go for linux/386 in /usr/local/go&lt;/p&gt;
+
+&lt;p&gt;Installed commands in /usr/local/go/bin&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;build-application:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Build application&lt;/h1&gt;
+
+&lt;p&gt;That&amp;rsquo;s it. Now you can build your application for i386 like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;harkx:~$ GOARCH=386 go build myapp.go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And look at the result:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;harkx:~$ file ./myapp
+./myapp: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;resources:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Resources:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.darkcoding.net/software/go-targeting-a-different-architecture/&#34; target=&#34;_blank&#34;&gt;
+Go: Targeting a different architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

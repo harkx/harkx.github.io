@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sysadmin on harkx</title>
+    <link>https://harkx.com/categories/sysadmin/</link>
+    <description>Recent content in Sysadmin on harkx</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Feb 2015 19:26:59 +0100</lastBuildDate>
+    <atom:link href="https://harkx.com/categories/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Go, build for a different architecture</title>
+      <link>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</link>
+      <pubDate>Mon, 23 Feb 2015 19:26:59 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</guid>
+      <description>
+
+&lt;p&gt;It happened that I needed to (re)build a small program for an i386 machine.
+This was about the same time I realized we still had those&amp;hellip;
+It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I wanted to document it.&lt;/p&gt;
+
+&lt;p&gt;First of all, build the correct Go compiler. I&amp;rsquo;m on (Ubuntu) amd64 and
+these instructions explain how to get the i386 build. (you can replace all (i)386 with amd64 to do the reverse..)&lt;/p&gt;
+
+&lt;h1 id=&#34;install-correct-libc6-dev:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Install correct libc6-dev&lt;/h1&gt;
+
+&lt;p&gt;This is not so hard: &lt;code&gt;sudo apt-get install libc6-dev-i386&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;build-go-for-i386:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Build Go for i386&lt;/h1&gt;
+
+&lt;p&gt;I&amp;rsquo;m assuming you did a binary install of
+&lt;a href=&#34;https://golang.org/dl/&#34; target=&#34;_blank&#34;&gt;golang&lt;/a&gt;, in that case you just
+need to find the make.bash script in the src dir like this.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;harkx:~$ cd /usr/local/go/src
+harkx:/usr/local/go/src$ sudo GOARCH=386 ./make.bash
+# Building C bootstrap tool.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When finished you&amp;rsquo;ll get something like this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Installed Go for linux/386 in /usr/local/go&lt;/p&gt;
+
+&lt;p&gt;Installed commands in /usr/local/go/bin&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;build-application:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Build application&lt;/h1&gt;
+
+&lt;p&gt;That&amp;rsquo;s it. Now you can build your application for i386 like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;harkx:~$ GOARCH=386 go build myapp.go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And look at the result:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;harkx:~$ file ./myapp
+./myapp: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;resources:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Resources:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.darkcoding.net/software/go-targeting-a-different-architecture/&#34; target=&#34;_blank&#34;&gt;
+Go: Targeting a different architecture&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cheat Sheets</title>
+      <link>https://harkx.com/blog/2015/02/12/cheat-sheets/</link>
+      <pubDate>Thu, 12 Feb 2015 19:40:47 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/12/cheat-sheets/</guid>
+      <description>&lt;p&gt;The homepage of &lt;strong&gt;&lt;a href=&#34;http://www.cheatography.com/&#34; target=&#34;_blank&#34;&gt;Cheatography&lt;/a&gt;&lt;/strong&gt; not only has a nice collection but you can also generate and share your own cheat sheets.&lt;/p&gt;
+
+&lt;p&gt;Some of my favorites:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/bechtold/cheat-sheets/tmux-the-terminal-multiplexer/&#34; target=&#34;_blank&#34;&gt;tmux&lt;/a&gt; - the best terminal multiplexer&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/richardjh/cheat-sheets/rsync/&#34; target=&#34;_blank&#34;&gt;rsync&lt;/a&gt; - a pretty long list&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/oguzkonya/cheat-sheets/bash/&#34; target=&#34;_blank&#34;&gt;bash&lt;/a&gt; - Bash Linux command line keyboard shortcuts&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/mishin/cheat-sheets/perlcheat/&#34; target=&#34;_blank&#34;&gt;perlcheat&lt;/a&gt; - for beginning Perl programmers&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cheatography.com/spaceduck/cheat-sheets/holidays-vacations/&#34; target=&#34;_blank&#34;&gt;holiday/vacations&lt;/a&gt; - enjoy your trip..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

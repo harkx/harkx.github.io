@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>General on harkx</title>
+    <link>https://harkx.com/categories/general/</link>
+    <description>Recent content in General on harkx</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Feb 2015 19:00:00 +0100</lastBuildDate>
+    <atom:link href="https://harkx.com/categories/general/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>First post with Hugo</title>
+      <link>https://harkx.com/blog/2015/02/08/first-post-with-hugo/</link>
+      <pubDate>Sun, 08 Feb 2015 19:00:00 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/02/08/first-post-with-hugo/</guid>
+      <description>&lt;p&gt;I was a little &lt;em&gt;bored&lt;/em&gt; with the previous look and decided to play around with some other static HTML generators. I did like that I could edit the website directly in GitHub but I still decided to move away from the current setup with &amp;ldquo;Jekyll Now&amp;rdquo;. It&amp;rsquo;s more fun to edit files in &lt;a href=&#34;https://atom.io/&#34; target=&#34;_blank&#34;&gt;atom&lt;/a&gt; anyway.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been playing with &lt;a href=&#34;https://golang.org/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Go&lt;/strong&gt;&lt;/a&gt; lately and decided to look for a static HTML generator in Go. That was when I met &lt;a href=&#34;http://gohugo.io/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/a&gt;, described as &amp;ldquo;A Fast &amp;amp; Modern Static Website Engine&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Why Hugo? It&amp;rsquo;s (really) fast and written in Go. This also means it&amp;rsquo;s multi-platform and has no dependencies. Just like me! (the multi-platform that is)&lt;/p&gt;
+
+&lt;p&gt;There are no default themes so I decided to go with &lt;a href=&#34;https://github.com/zyro/hyde-x&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Hyde-X&lt;/strong&gt;&lt;/a&gt;, an enhanced port of the Jekyll &lt;em&gt;&amp;ldquo;Hyde&amp;rdquo;&lt;/em&gt; theme.&lt;/p&gt;
+
+&lt;p&gt;To summarize, let&amp;rsquo;s see what we have now:
+&lt;ul&gt;
+&lt;li&gt; The Hugo Go application (a 12 megabyte binary).
+&lt;li&gt; Markdown format for the content. (or HTML where needed)
+&lt;li&gt; GitHub hosting.
+&lt;li&gt; Static HTML. (=fast)
+&lt;li&gt; Mobile ready website.
+&lt;li&gt; Fast and multi-platform engine.
+&lt;li&gt; Two GitHub repositories, one for the Hugo code and one for the static HTML files.
+&lt;/ul&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

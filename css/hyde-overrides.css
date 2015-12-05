@@ -1,0 +1,27 @@
+/*
+ * Tweaks and overrides to hyde.css
+ */
+
+.sidebar-about h1 {
+  color: #fff;
+  margin-top: 0;
+  font-family: "Lato";
+  font-size: 2.5rem;
+}
+
+.sidebar-nav {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+
+/* Red */
+.theme-base-08dark .sidebar {
+  background-color: #A11717;
+/* *HARKX* A11717 or 831B1B */
+}
+.theme-base-08dark .content a,
+.theme-base-08dark .related-posts li a:hover {
+  color: #A11717;
+}

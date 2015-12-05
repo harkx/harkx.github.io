@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Go, build for a different architecture &middot; @harkx</title>
+
+  
+  <link rel="stylesheet" href="https://harkx.com/css/poole.css">
+  <link rel="stylesheet" href="https://harkx.com/css/hyde.css">
+  <link rel="stylesheet" href="https://harkx.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="https://harkx.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="https://harkx.com/css/hyde-x.css">
+  <link rel="stylesheet" href="https://harkx.com/css/highlight/sunburst.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://harkx.com/touch-icon-144-precomposed.png">
+  <link href="https://harkx.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Build a Go application for a different architecture on Linux. I needed to build a binary for an i386 machine but I&#39;m on an amd64 kernel myself.">
+  <meta name="keywords" content="harkx,blog,technology,it,linux">
+  <link rel="author" href="http://plus.google.com/104498694078376935988">
+</head>
+<body class="theme-base-08dark">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+      <h1>@harkx</h1>
+      <p class="lead">T(ech) &amp; T(ravel)</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="https://harkx.com/">Blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="https://harkx.com/links/">#links</a></li>
+      
+      <li class="sidebar-nav-item"><a href="https://harkx.com/about/">#whoami</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/harkx"><i class="fa fa-github-square fa-3x"></i></a>
+      <a href="https://bitbucket.org/harkx"><i class="fa fa-bitbucket-square fa-3x"></i></a>
+      
+      <a href="http://be.linkedin.com/in/kristofhardy"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="https://twitter.com/harkx"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2015 <a href="https://harkx.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>Go, build for a different architecture</h1>
+    <span class="post-date">Feb 23, 2015 &middot; 1 minute read &middot; <a href="https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="https://harkx.com/categories/golang">golang</a><a class="label" href="https://harkx.com/categories/sysadmin">sysadmin</a>
+    </span>
+    
+
+<p>It happened that I needed to (re)build a small program for an i386 machine.
+This was about the same time I realized we still had those&hellip;
+It&rsquo;s very easy but since I&rsquo;ll not be using this a lot I wanted to document it.</p>
+
+<p>First of all, build the correct Go compiler. I&rsquo;m on (Ubuntu) amd64 and
+these instructions explain how to get the i386 build. (you can replace all (i)386 with amd64 to do the reverse..)</p>
+
+<h1 id="install-correct-libc6-dev:4f5eb997f79e75cf7267d3b11e65ab44">Install correct libc6-dev</h1>
+
+<p>This is not so hard: <code>sudo apt-get install libc6-dev-i386</code></p>
+
+<h1 id="build-go-for-i386:4f5eb997f79e75cf7267d3b11e65ab44">Build Go for i386</h1>
+
+<p>I&rsquo;m assuming you did a binary install of
+<a href="https://golang.org/dl/" target="_blank">golang</a>, in that case you just
+need to find the make.bash script in the src dir like this.</p>
+
+<pre><code class="language-bash">harkx:~$ cd /usr/local/go/src
+harkx:/usr/local/go/src$ sudo GOARCH=386 ./make.bash
+# Building C bootstrap tool.
+</code></pre>
+
+<p>When finished you&rsquo;ll get something like this:</p>
+
+<blockquote>
+<p>Installed Go for linux/386 in /usr/local/go</p>
+
+<p>Installed commands in /usr/local/go/bin</p>
+</blockquote>
+
+<h1 id="build-application:4f5eb997f79e75cf7267d3b11e65ab44">Build application</h1>
+
+<p>That&rsquo;s it. Now you can build your application for i386 like this:</p>
+
+<pre><code class="language-bash">harkx:~$ GOARCH=386 go build myapp.go
+</code></pre>
+
+<p>And look at the result:</p>
+
+<pre><code class="language-bash">harkx:~$ file ./myapp
+./myapp: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
+</code></pre>
+
+<h2 id="resources:4f5eb997f79e75cf7267d3b11e65ab44">Resources:</h2>
+
+<ul>
+<li><a href="http://www.darkcoding.net/software/go-targeting-a-different-architecture/" target="_blank">
+Go: Targeting a different architecture</a></li>
+</ul>
+
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "harkx";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "harkx";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="https://harkx.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-54333082-2'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
+
