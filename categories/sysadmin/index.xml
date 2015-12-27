@@ -24,11 +24,11 @@ It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I want
 &lt;p&gt;First of all, build the correct Go compiler. I&amp;rsquo;m on (Ubuntu) amd64 and
 these instructions explain how to get the i386 build. (you can replace all (i)386 with amd64 to do the reverse..)&lt;/p&gt;
 
-&lt;h1 id=&#34;install-correct-libc6-dev:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Install correct libc6-dev&lt;/h1&gt;
+&lt;h1 id=&#34;install-correct-libc6-dev&#34;&gt;Install correct libc6-dev&lt;/h1&gt;
 
 &lt;p&gt;This is not so hard: &lt;code&gt;sudo apt-get install libc6-dev-i386&lt;/code&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;build-go-for-i386:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Build Go for i386&lt;/h1&gt;
+&lt;h1 id=&#34;build-go-for-i386&#34;&gt;Build Go for i386&lt;/h1&gt;
 
 &lt;p&gt;I&amp;rsquo;m assuming you did a binary install of
 &lt;a href=&#34;https://golang.org/dl/&#34; target=&#34;_blank&#34;&gt;golang&lt;/a&gt;, in that case you just
@@ -47,7 +47,7 @@ harkx:/usr/local/go/src$ sudo GOARCH=386 ./make.bash
 &lt;p&gt;Installed commands in /usr/local/go/bin&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h1 id=&#34;build-application:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Build application&lt;/h1&gt;
+&lt;h1 id=&#34;build-application&#34;&gt;Build application&lt;/h1&gt;
 
 &lt;p&gt;That&amp;rsquo;s it. Now you can build your application for i386 like this:&lt;/p&gt;
 
@@ -60,12 +60,14 @@ harkx:/usr/local/go/src$ sudo GOARCH=386 ./make.bash
 ./myapp: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;resources:4f5eb997f79e75cf7267d3b11e65ab44&#34;&gt;Resources:&lt;/h2&gt;
+&lt;h2 id=&#34;resources&#34;&gt;Resources:&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.darkcoding.net/software/go-targeting-a-different-architecture/&#34; target=&#34;_blank&#34;&gt;
 Go: Targeting a different architecture&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     

@@ -95,11 +95,11 @@ It&rsquo;s very easy but since I&rsquo;ll not be using this a lot I wanted to do
 <p>First of all, build the correct Go compiler. I&rsquo;m on (Ubuntu) amd64 and
 these instructions explain how to get the i386 build. (you can replace all (i)386 with amd64 to do the reverse..)</p>
 
-<h1 id="install-correct-libc6-dev:4f5eb997f79e75cf7267d3b11e65ab44">Install correct libc6-dev</h1>
+<h1 id="install-correct-libc6-dev">Install correct libc6-dev</h1>
 
 <p>This is not so hard: <code>sudo apt-get install libc6-dev-i386</code></p>
 
-<h1 id="build-go-for-i386:4f5eb997f79e75cf7267d3b11e65ab44">Build Go for i386</h1>
+<h1 id="build-go-for-i386">Build Go for i386</h1>
 
 <p>I&rsquo;m assuming you did a binary install of
 <a href="https://golang.org/dl/" target="_blank">golang</a>, in that case you just
@@ -118,7 +118,7 @@ harkx:/usr/local/go/src$ sudo GOARCH=386 ./make.bash
 <p>Installed commands in /usr/local/go/bin</p>
 </blockquote>
 
-<h1 id="build-application:4f5eb997f79e75cf7267d3b11e65ab44">Build application</h1>
+<h1 id="build-application">Build application</h1>
 
 <p>That&rsquo;s it. Now you can build your application for i386 like this:</p>
 
@@ -131,12 +131,14 @@ harkx:/usr/local/go/src$ sudo GOARCH=386 ./make.bash
 ./myapp: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
 </code></pre>
 
-<h2 id="resources:4f5eb997f79e75cf7267d3b11e65ab44">Resources:</h2>
+<h2 id="resources">Resources:</h2>
 
 <ul>
 <li><a href="http://www.darkcoding.net/software/go-targeting-a-different-architecture/" target="_blank">
 Go: Targeting a different architecture</a></li>
 </ul>
+
+<p><em><p align=right>written by @harkx</p></em></p>
 
   </div>
   <div id="disqus_thread"></div>

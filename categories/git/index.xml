@@ -23,7 +23,7 @@
 
 &lt;p&gt;And last (but not least) is a list of some fine Git resources.&lt;/p&gt;
 
-&lt;h2 id=&#34;git-reset:d07ca23090eccfe30798d518663065c1&#34;&gt;Git reset&lt;/h2&gt;
+&lt;h2 id=&#34;git-reset&#34;&gt;Git reset&lt;/h2&gt;
 
 &lt;p&gt;Reset uncommited changes and go back to HEAD. It discards all uncommitted changes! Be careful, potentially dangerous, this throws away all your uncommitted changes!&lt;/p&gt;
 
@@ -31,7 +31,7 @@
 &lt;li&gt;&lt;code&gt;git reset --hard HEAD&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;git-commit-amend:d07ca23090eccfe30798d518663065c1&#34;&gt;Git commit (amend)&lt;/h2&gt;
+&lt;h2 id=&#34;git-commit-amend&#34;&gt;Git commit (amend)&lt;/h2&gt;
 
 &lt;p&gt;If you forgot some changes in your last commit you can still fix this without creating a new commit. Just add your changes and redo the last commit with the &lt;em&gt;amend&lt;/em&gt; parameter, it will replace the last commit.&lt;/p&gt;
 
@@ -41,7 +41,7 @@
 
 &lt;p&gt;Watch out if you&amp;rsquo;ve already pushed to a remote repository, you might need to do a &lt;code&gt;git push -f&lt;/code&gt; so be careful, this might mess with other people&amp;rsquo;s repository.&lt;/p&gt;
 
-&lt;h2 id=&#34;colored-log-tree-view:d07ca23090eccfe30798d518663065c1&#34;&gt;Colored log tree view&lt;/h2&gt;
+&lt;h2 id=&#34;colored-log-tree-view&#34;&gt;Colored log tree view&lt;/h2&gt;
 
 &lt;p&gt;A cool command to view the Git log. Great because it uses color and displays branches in a tree format.&lt;/p&gt;
 
@@ -63,7 +63,7 @@
 &lt;/figure&gt;
 
 
-&lt;h2 id=&#34;git-aliases:d07ca23090eccfe30798d518663065c1&#34;&gt;Git aliases&lt;/h2&gt;
+&lt;h2 id=&#34;git-aliases&#34;&gt;Git aliases&lt;/h2&gt;
 
 &lt;p&gt;You can put aliases in your .gitconfig file like this:&lt;/p&gt;
 
@@ -79,7 +79,7 @@
 &lt;p&gt;Easy! From now on you can use &lt;code&gt;git lg&lt;/code&gt; to get that cool view of the git log.
   &lt;br&gt;Or &lt;code&gt;git df &amp;lt;filename&amp;gt;&lt;/code&gt; to view the diff of a specific file.&lt;/p&gt;
 
-&lt;h2 id=&#34;git-resources:d07ca23090eccfe30798d518663065c1&#34;&gt;Git resources&lt;/h2&gt;
+&lt;h2 id=&#34;git-resources&#34;&gt;Git resources&lt;/h2&gt;
 
 &lt;p&gt;Some Git resources I used and liked&lt;/p&gt;
 
