@@ -6,8 +6,143 @@
     <description>Recent content in General on harkx</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Feb 2015 19:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 27 Dec 2015 06:57:14 +0100</lastBuildDate>
     <atom:link href="https://harkx.com/categories/general/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Running Odoo with https</title>
+      <link>https://harkx.com/blog/2015/12/27/running-odoo-with-https/</link>
+      <pubDate>Sun, 27 Dec 2015 06:57:14 +0100</pubDate>
+      
+      <guid>https://harkx.com/blog/2015/12/27/running-odoo-with-https/</guid>
+      <description>
+
+&lt;p&gt;It has gotten so easy to use https since &lt;a href=&#34;https://letsencrypt.org/&#34; target=&#34;_blank&#34;&gt;https://letsencrypt.org/&lt;/a&gt; opened up.
+Not only can you get free ssl certificates but even more important, &lt;strong&gt;automate&lt;/strong&gt;
+the process! That&amp;rsquo;s how it should be!&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m using Caddy. I&amp;rsquo;m assuming your Odoo server is
+already running. (for example, on 127.0.0.1:8069)&lt;/p&gt;
+
+&lt;p&gt;Also important, some requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DNS is configured correctly, pointing to your (Caddy/Odoo) server
+
+&lt;ul&gt;
+&lt;li&gt;If incorrect, generating the certificates will not work!&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Using Debian 8, using systemd&lt;/li&gt;
+&lt;li&gt;Caddy 0.8&lt;/li&gt;
+&lt;li&gt;Odoo 8&lt;/li&gt;
+&lt;li&gt;No other webserver running on ports 80 or 443 !&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;install-caddy&#34;&gt;Install Caddy&lt;/h1&gt;
+
+&lt;p&gt;Download the binary from &lt;a href=&#34;https://caddyserver.com/&#34; target=&#34;_blank&#34;&gt;https://caddyserver.com/&lt;/a&gt; (Linux 64-bit) and extract
+the archive into &lt;code&gt;/usr/local/bin&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;configure-caddy&#34;&gt;&amp;ldquo;Configure&amp;rdquo; Caddy&lt;/h2&gt;
+
+&lt;p&gt;There&amp;rsquo;s not much to configure but since I will run Caddy on startup I
+keep my config in &lt;code&gt;/etc/caddy&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create a config directory and add a user to run Caddy:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir /etc/caddy
+useradd caddy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Now create the config file &lt;code&gt;/etc/caddy/Caddyfile&lt;/code&gt; and fill in your info:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;odoo.harkx.com { # Your url should go here..
+  proxy / http://127.0.0.1:8069 { # Fill in the correct port..
+    proxy_header Host {host}
+    }
+  proxy /longpolling http://127.0.0.1:8072 { # in case you use it
+    proxy_header Host {host}
+    }
+  gzip
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will make the following &lt;em&gt;magic&lt;/em&gt; happen:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Listen on 80 and 443&lt;/li&gt;
+&lt;li&gt;Forward incoming connections on 80 to 443&lt;/li&gt;
+&lt;li&gt;Use HTTP/2&lt;/li&gt;
+&lt;li&gt;Renew your certificates if needed&lt;/li&gt;
+&lt;li&gt;Act as a proxy for Odoo on 127.0.0.1:8069&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;configure-certificates&#34;&gt;Configure certificates&lt;/h2&gt;
+
+&lt;p&gt;We&amp;rsquo;ll be running Caddy as user &amp;ldquo;caddy&amp;rdquo; so we need to give it permission to bind
+to low ports as non-root user. Easily accomplished by runnning this command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;setcap cap_net_bind_service=+ep /usr/local/bin/caddy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I prefer to generate the certificates manually the first time. If
+something goes wrong you&amp;rsquo;ll be able to catch the error. (you won&amp;rsquo;t see it when
+running in daemon mode)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;su caddy
+/usr/local/bin/caddy -agree -email YOUREMAIL -conf=/etc/caddy/Caddyfile
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The certificates are now located in: &lt;code&gt;/home/caddy/.caddy/letsencrypt/sites/&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;configure-caddy-for-auto-startup&#34;&gt;Configure Caddy for auto startup&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create the caddy systemd service by adding this file to your system:
+&lt;code&gt;/etc/systemd/system/caddy.service&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=Caddy webserver
+Documentation=https://caddyserver.com/
+After=network.target
+
+[Service]
+User=caddy
+Group=caddy
+WorkingDirectory=/etc/caddy
+LimitNOFILE=4096
+ExecStart=/usr/local/bin/caddy -agree -email YOUREMAIL -conf=/etc/caddy/Caddyfile
+Restart=on-failure
+StartLimitInterval=600
+
+[Install]
+WantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Now make systemd aware of this new service: &lt;code&gt;systemctl daemon-reload&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start the service: &lt;code&gt;systemctl start caddy.service&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Verify it&amp;rsquo;s running correctly: &lt;code&gt;systemctl status caddy.service -l&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That&amp;rsquo;s it, your Odoo instance is now being served over https.&lt;/p&gt;
+
+&lt;h1 id=&#34;resources&#34;&gt;Resources:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://letsencrypt.org/&#34; target=&#34;_blank&#34;&gt;https://letsencrypt.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://caddyserver.com/&#34; target=&#34;_blank&#34;&gt;https://caddyserver.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ssllabs.com/ssltest/analyze.html&#34; target=&#34;_blank&#34;&gt;https://www.ssllabs.com/ssltest/analyze.html&lt;/a&gt; - Test your SSL server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>First post with Hugo</title>

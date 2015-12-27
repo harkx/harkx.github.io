@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Running Odoo with https &middot; @harkx</title>
+
+  
+  <link rel="stylesheet" href="https://harkx.com/css/poole.css">
+  <link rel="stylesheet" href="https://harkx.com/css/hyde.css">
+  <link rel="stylesheet" href="https://harkx.com/css/poole-overrides.css">
+  <link rel="stylesheet" href="https://harkx.com/css/hyde-overrides.css">
+  <link rel="stylesheet" href="https://harkx.com/css/hyde-x.css">
+  <link rel="stylesheet" href="https://harkx.com/css/highlight/sunburst.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://harkx.com/touch-icon-144-precomposed.png">
+  <link href="https://harkx.com/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="Running Odoo with https has gotten so much simpler.">
+  <meta name="keywords" content="harkx,blog,technology,it,linux">
+  <link rel="author" href="http://plus.google.com/104498694078376935988">
+</head>
+<body class="theme-base-08dark">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+
+      <h1><a href="/">@harkx</a></h1>
+      <p class="lead">T(ech) &amp; T(ravel)</p>
+    </div>
+
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="https://harkx.com/">#blog</a></li>
+      
+      <li class="sidebar-nav-item"><a href="https://harkx.com/links/">#links</a></li>
+      
+      <li class="sidebar-nav-item"><a href="https://harkx.com/about/">#whoami</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/harkx"><i class="fa fa-github-square fa-3x"></i></a>
+      <a href="https://bitbucket.org/harkx"><i class="fa fa-bitbucket-square fa-3x"></i></a>
+      
+      <a href="https://www.linkedin.com/in/kristofhardy"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      
+      
+      <a href="https://twitter.com/harkx"><i class="fa fa-twitter-square fa-3x"></i></a>
+      
+      
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2015 <a href="https://harkx.com/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1>Running Odoo with https</h1>
+    <span class="post-date">Dec 27, 2015 &middot; 2 minute read &middot; <a href="https://harkx.com/blog/2015/12/27/running-odoo-with-https/#disqus_thread">Comments</a>
+    
+    <br/>
+    <a class="label" href="https://harkx.com/categories/general">general</a><a class="label" href="https://harkx.com/categories/sysadmin">sysadmin</a>
+    </span>
+    
+
+<p>It has gotten so easy to use https since <a href="https://letsencrypt.org/" target="_blank">https://letsencrypt.org/</a> opened up.
+Not only can you get free ssl certificates but even more important, <strong>automate</strong>
+the process! That&rsquo;s how it should be!</p>
+
+<p>I&rsquo;m using Caddy. I&rsquo;m assuming your Odoo server is
+already running. (for example, on 127.0.0.1:8069)</p>
+
+<p>Also important, some requirements:</p>
+
+<ul>
+<li>DNS is configured correctly, pointing to your (Caddy/Odoo) server
+
+<ul>
+<li>If incorrect, generating the certificates will not work!</li>
+</ul></li>
+<li>Using Debian 8, using systemd</li>
+<li>Caddy 0.8</li>
+<li>Odoo 8</li>
+<li>No other webserver running on ports 80 or 443 !</li>
+</ul>
+
+<h1 id="install-caddy">Install Caddy</h1>
+
+<p>Download the binary from <a href="https://caddyserver.com/" target="_blank">https://caddyserver.com/</a> (Linux 64-bit) and extract
+the archive into <code>/usr/local/bin</code>.</p>
+
+<h2 id="configure-caddy">&ldquo;Configure&rdquo; Caddy</h2>
+
+<p>There&rsquo;s not much to configure but since I will run Caddy on startup I
+keep my config in <code>/etc/caddy</code>.</p>
+
+<ul>
+<li>Create a config directory and add a user to run Caddy:</li>
+</ul>
+
+<pre><code>mkdir /etc/caddy
+useradd caddy
+</code></pre>
+
+<ul>
+<li>Now create the config file <code>/etc/caddy/Caddyfile</code> and fill in your info:</li>
+</ul>
+
+<pre><code>odoo.harkx.com { # Your url should go here..
+  proxy / http://127.0.0.1:8069 { # Fill in the correct port..
+    proxy_header Host {host}
+    }
+  proxy /longpolling http://127.0.0.1:8072 { # in case you use it
+    proxy_header Host {host}
+    }
+  gzip
+}
+</code></pre>
+
+<p>This will make the following <em>magic</em> happen:</p>
+
+<ul>
+<li>Listen on 80 and 443</li>
+<li>Forward incoming connections on 80 to 443</li>
+<li>Use HTTP/2</li>
+<li>Renew your certificates if needed</li>
+<li>Act as a proxy for Odoo on 127.0.0.1:8069</li>
+</ul>
+
+<h2 id="configure-certificates">Configure certificates</h2>
+
+<p>We&rsquo;ll be running Caddy as user &ldquo;caddy&rdquo; so we need to give it permission to bind
+to low ports as non-root user. Easily accomplished by runnning this command:</p>
+
+<pre><code>setcap cap_net_bind_service=+ep /usr/local/bin/caddy
+</code></pre>
+
+<p>I prefer to generate the certificates manually the first time. If
+something goes wrong you&rsquo;ll be able to catch the error. (you won&rsquo;t see it when
+running in daemon mode)</p>
+
+<pre><code>su caddy
+/usr/local/bin/caddy -agree -email YOUREMAIL -conf=/etc/caddy/Caddyfile
+</code></pre>
+
+<p>The certificates are now located in: <code>/home/caddy/.caddy/letsencrypt/sites/</code></p>
+
+<h1 id="configure-caddy-for-auto-startup">Configure Caddy for auto startup</h1>
+
+<ul>
+<li>Create the caddy systemd service by adding this file to your system:
+<code>/etc/systemd/system/caddy.service</code></li>
+</ul>
+
+<pre><code>[Unit]
+Description=Caddy webserver
+Documentation=https://caddyserver.com/
+After=network.target
+
+[Service]
+User=caddy
+Group=caddy
+WorkingDirectory=/etc/caddy
+LimitNOFILE=4096
+ExecStart=/usr/local/bin/caddy -agree -email YOUREMAIL -conf=/etc/caddy/Caddyfile
+Restart=on-failure
+StartLimitInterval=600
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+
+<ul>
+<li>Now make systemd aware of this new service: <code>systemctl daemon-reload</code></li>
+<li>Start the service: <code>systemctl start caddy.service</code></li>
+<li>Verify it&rsquo;s running correctly: <code>systemctl status caddy.service -l</code></li>
+</ul>
+
+<p>That&rsquo;s it, your Odoo instance is now being served over https.</p>
+
+<h1 id="resources">Resources:</h1>
+
+<ul>
+<li><a href="https://letsencrypt.org/" target="_blank">https://letsencrypt.org/</a></li>
+<li><a href="https://caddyserver.com/" target="_blank">https://caddyserver.com/</a></li>
+<li><a href="https://www.ssllabs.com/ssltest/analyze.html" target="_blank">https://www.ssllabs.com/ssltest/analyze.html</a> - Test your SSL server</li>
+</ul>
+
+<p><em><p align=right>written by @harkx</p></em></p>
+
+  </div>
+  <div id="disqus_thread"></div>
+</div>
+
+
+<script type="text/javascript">
+var disqus_shortname = "harkx";
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+
+
+
+<script type="text/javascript">
+    var disqus_shortname = "harkx";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<script src="https://harkx.com/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+  var _gaq=[['_setAccount','UA-54333082-2'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+</body>
+</html>
+
