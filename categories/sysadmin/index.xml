@@ -138,6 +138,7 @@ WantedBy=multi-user.target
 &lt;li&gt;&lt;a href=&#34;https://letsencrypt.org/&#34; target=&#34;_blank&#34;&gt;https://letsencrypt.org/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://caddyserver.com/&#34; target=&#34;_blank&#34;&gt;https://caddyserver.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.ssllabs.com/ssltest/analyze.html&#34; target=&#34;_blank&#34;&gt;https://www.ssllabs.com/ssltest/analyze.html&lt;/a&gt; - Test your SSL server&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.odoo.com/&#34; target=&#34;_blank&#34;&gt;https://www.odoo.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
