@@ -6,8 +6,24 @@
     <description>Recent content in Sysadmin on harkx</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Dec 2015 06:57:14 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 25 Sep 2016 13:34:41 +0200</lastBuildDate>
     <atom:link href="https://harkx.com/categories/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>VMware vSphere Client downloads</title>
+      <link>https://harkx.com/blog/2016/09/25/vmware-vsphere-client-downloads/</link>
+      <pubDate>Sun, 25 Sep 2016 13:34:41 +0200</pubDate>
+      
+      <guid>https://harkx.com/blog/2016/09/25/vmware-vsphere-client-downloads/</guid>
+      <description>&lt;p&gt;For future reference, here are all the VMware vSphere Client downloads:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2089791&#34; target=&#34;_blank&#34;&gt;Download URLs for vSphere Client&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Running Odoo with https</title>
