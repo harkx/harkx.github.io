@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sysadmin on harkx</title>
-    <link>https://harkx.com/categories/sysadmin/</link>
-    <description>Recent content in Sysadmin on harkx</description>
+    <title>harkx</title>
+    <link>https://harkx.com/categories/sysadmin/index.xml</link>
+    <description>Recent content on harkx</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Sep 2016 13:34:41 +0200</lastBuildDate>
     <atom:link href="https://harkx.com/categories/sysadmin/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -49,7 +48,7 @@ already running. (for example, on 127.0.0.1:8069)&lt;/p&gt;
 &lt;li&gt;If incorrect, generating the certificates will not work!&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Using Debian 8, using systemd&lt;/li&gt;
-&lt;li&gt;Caddy 0.8&lt;/li&gt;
+&lt;li&gt;Caddy 0.9.3&lt;/li&gt;
 &lt;li&gt;Odoo 8&lt;/li&gt;
 &lt;li&gt;No other webserver running on ports 80 or 443 !&lt;/li&gt;
 &lt;/ul&gt;
@@ -78,10 +77,10 @@ adduser --disabled-login caddy
 
 &lt;pre&gt;&lt;code&gt;odoo.harkx.com { # Your url should go here..
   proxy / http://127.0.0.1:8069 { # Fill in the correct port..
-    proxy_header Host {host}
+    header_upstream Host {host}
     }
   proxy /longpolling http://127.0.0.1:8072 { # in case you use it
-    proxy_header Host {host}
+    header_upstream Host {host}
     }
   gzip
 }
@@ -93,7 +92,7 @@ adduser --disabled-login caddy
 &lt;li&gt;Listen on 80 and 443&lt;/li&gt;
 &lt;li&gt;Forward incoming connections on 80 to 443&lt;/li&gt;
 &lt;li&gt;Use HTTP/2&lt;/li&gt;
-&lt;li&gt;Renew your certificates if needed&lt;/li&gt;
+&lt;li&gt;Renew your certificates when needed&lt;/li&gt;
 &lt;li&gt;Act as a proxy for Odoo on 127.0.0.1:8069&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -131,7 +130,7 @@ After=network.target
 User=caddy
 Group=caddy
 WorkingDirectory=/etc/caddy
-LimitNOFILE=4096
+LimitNOFILE=8192
 ExecStart=/usr/local/bin/caddy -agree -email YOUREMAIL -conf=/etc/caddy/Caddyfile
 Restart=on-failure
 StartLimitInterval=600
@@ -155,6 +154,13 @@ WantedBy=multi-user.target
 &lt;li&gt;&lt;a href=&#34;https://caddyserver.com/&#34; target=&#34;_blank&#34;&gt;https://caddyserver.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.ssllabs.com/ssltest/analyze.html&#34; target=&#34;_blank&#34;&gt;https://www.ssllabs.com/ssltest/analyze.html&lt;/a&gt; - Test your SSL server&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.odoo.com/&#34; target=&#34;_blank&#34;&gt;https://www.odoo.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;updates&#34;&gt;UPDATES&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;20161011 : Changed Caddy parameter &lt;em&gt;proxy_header&lt;/em&gt; to &lt;em&gt;header_upstream&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;20161011 : Modified LimitNOFILE in systemd config to &lt;em&gt;8192&lt;/em&gt; from &lt;em&gt;4096&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;em&gt;&lt;p align=right&gt;written by @harkx&lt;/p&gt;&lt;/em&gt;&lt;/p&gt;

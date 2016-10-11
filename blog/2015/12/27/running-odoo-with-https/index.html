@@ -104,7 +104,7 @@ already running. (for example, on 127.0.0.1:8069)</p>
 <li>If incorrect, generating the certificates will not work!</li>
 </ul></li>
 <li>Using Debian 8, using systemd</li>
-<li>Caddy 0.8</li>
+<li>Caddy 0.9.3</li>
 <li>Odoo 8</li>
 <li>No other webserver running on ports 80 or 443 !</li>
 </ul>
@@ -133,10 +133,10 @@ adduser --disabled-login caddy
 
 <pre><code>odoo.harkx.com { # Your url should go here..
   proxy / http://127.0.0.1:8069 { # Fill in the correct port..
-    proxy_header Host {host}
+    header_upstream Host {host}
     }
   proxy /longpolling http://127.0.0.1:8072 { # in case you use it
-    proxy_header Host {host}
+    header_upstream Host {host}
     }
   gzip
 }
@@ -148,7 +148,7 @@ adduser --disabled-login caddy
 <li>Listen on 80 and 443</li>
 <li>Forward incoming connections on 80 to 443</li>
 <li>Use HTTP/2</li>
-<li>Renew your certificates if needed</li>
+<li>Renew your certificates when needed</li>
 <li>Act as a proxy for Odoo on 127.0.0.1:8069</li>
 </ul>
 
@@ -186,7 +186,7 @@ After=network.target
 User=caddy
 Group=caddy
 WorkingDirectory=/etc/caddy
-LimitNOFILE=4096
+LimitNOFILE=8192
 ExecStart=/usr/local/bin/caddy -agree -email YOUREMAIL -conf=/etc/caddy/Caddyfile
 Restart=on-failure
 StartLimitInterval=600
@@ -210,6 +210,13 @@ WantedBy=multi-user.target
 <li><a href="https://caddyserver.com/" target="_blank">https://caddyserver.com/</a></li>
 <li><a href="https://www.ssllabs.com/ssltest/analyze.html" target="_blank">https://www.ssllabs.com/ssltest/analyze.html</a> - Test your SSL server</li>
 <li><a href="https://www.odoo.com/" target="_blank">https://www.odoo.com/</a></li>
+</ul>
+
+<h1 id="updates">UPDATES</h1>
+
+<ul>
+<li>20161011 : Changed Caddy parameter <em>proxy_header</em> to <em>header_upstream</em>.</li>
+<li>20161011 : Modified LimitNOFILE in systemd config to <em>8192</em> from <em>4096</em>.</li>
 </ul>
 
 <p><em><p align=right>written by @harkx</p></em></p>
