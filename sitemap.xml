@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <url>
-    <loc>https://harkx.com/</loc>
-    <lastmod>2016-09-25T13:34:41+02:00</lastmod>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://harkx.com/blog/2016/09/25/vmware-vsphere-client-downloads/</loc>
@@ -47,6 +43,53 @@
   
   <url>
     <loc>https://harkx.com/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://harkx.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://harkx.com/categories/documentation/</loc>
+    <lastmod>2015-02-12T19:40:47+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://harkx.com/categories/general/</loc>
+    <lastmod>2016-09-25T13:34:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://harkx.com/categories/git/</loc>
+    <lastmod>2015-02-11T21:30:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://harkx.com/categories/golang/</loc>
+    <lastmod>2015-02-23T19:26:59+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://harkx.com/post/</loc>
+    <lastmod>2016-09-25T13:34:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://harkx.com/categories/sysadmin/</loc>
+    <lastmod>2016-09-25T13:34:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://harkx.com/</loc>
+    <lastmod>2016-09-25T13:34:41+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
