@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on @harkx</title>
-    <link>/categories/golang/</link>
+    <link>/tags/golang/</link>
     <description>Recent content in Golang on @harkx</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Feb 2015 19:26:59 +0100</lastBuildDate>
     
-	<atom:link href="/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,6 +19,16 @@
       <guid>/post/go/go-build-different-arch/</guid>
       <description>It happened that I needed to (re)build a small program for an i386 machine. This was about the same time I realized we still had those&amp;hellip; It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I wanted to document it.
 First of all, build the correct Go compiler. I&amp;rsquo;m on (Ubuntu) amd64 and these instructions explain how to get the i386 build. (you can replace all (i)386 with amd64 to do the reverse.</description>
+    </item>
+    
+    <item>
+      <title>First post with Hugo</title>
+      <link>/post/first-post-with-hugo/</link>
+      <pubDate>Sun, 08 Feb 2015 19:00:00 +0100</pubDate>
+      
+      <guid>/post/first-post-with-hugo/</guid>
+      <description>I was a little bored with the previous look and decided to play around with some other static HTML generators. I did like that I could edit the website directly in GitHub but I still decided to move away from the current setup with &amp;ldquo;Jekyll Now&amp;rdquo;. It&amp;rsquo;s more fun to edit files in atom anyway.
+I&amp;rsquo;ve been playing with Go lately and decided to look for a static HTML generator in Go.</description>
     </item>
     
   </channel>

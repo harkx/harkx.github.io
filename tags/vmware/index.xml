@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vmware on @harkx</title>
+    <link>/tags/vmware/</link>
+    <description>Recent content in Vmware on @harkx</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Sep 2016 13:34:41 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/vmware/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VMware vSphere Client downloads</title>
+      <link>/post/vsphereclients/</link>
+      <pubDate>Sun, 25 Sep 2016 13:34:41 +0200</pubDate>
+      
+      <guid>/post/vsphereclients/</guid>
+      <description>For future reference, here are all the VMware vSphere Client downloads:
+ Download URLs for vSphere Client  written by @harkx</description>
+    </item>
+    
+  </channel>
+</rss>

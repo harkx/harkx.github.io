@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>@harkx</title>
-    <link>/</link>
-    <description>Recent content on @harkx</description>
+    <title>Blog on @harkx</title>
+    <link>/tags/blog/</link>
+    <description>Recent content in Blog on @harkx</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Sep 2016 13:34:41 +0200</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -74,38 +74,6 @@ Git reset Reset uncommited changes and go back to HEAD. It discards all uncommit
       <guid>/post/first-post-with-hugo/</guid>
       <description>I was a little bored with the previous look and decided to play around with some other static HTML generators. I did like that I could edit the website directly in GitHub but I still decided to move away from the current setup with &amp;ldquo;Jekyll Now&amp;rdquo;. It&amp;rsquo;s more fun to edit files in atom anyway.
 I&amp;rsquo;ve been playing with Go lately and decided to look for a static HTML generator in Go.</description>
-    </item>
-    
-    <item>
-      <title>License</title>
-      <link>/license/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/license/</guid>
-      <description>Content license All non-code blog content is licensed under Creative Commons BY-SA 4.0.
-Code license All source code files and snippets found on this blog, unless otherwise explicitly noted, are licensed under the terms below.
-Copyright 2015 Kristof Hardy Licensed under the Apache License, Version 2.0 (the &amp;quot;License&amp;quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.</description>
-    </item>
-    
-    <item>
-      <title>#links</title>
-      <link>/links/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/links/</guid>
-      <description>A collection of (some of) my frequently used links. DNS  intoDNS - Check DNS health World Wide Web Domain Tools by ITOC Australia - DNS and Web tools  Linux  Debian CD Image Archive - Where the older CD/DVD releases of Debian are stored. Planet Debian - Planet Debian tmux and screen cheatsheet - A screen and tmux cheatsheet tmux cheatsheet - tmux cheatsheet tmux Crash Course tmux Crash course  Security  Let&amp;rsquo;s Encrypt - Certificate Authority for your SSL needs: free, automated and open!</description>
-    </item>
-    
-    <item>
-      <title>#whoami</title>
-      <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>I am Kristof Hardy. Passionate about travel, information technology and automation (http://en.wikipedia.org/wiki/Automation) in all its aspects, living in the eastern part of Flemish Brabant (http://en.wikipedia.org/wiki/Flemish_Brabant) in Belgium.
-
-I’m working at Cats&amp;amp;Dogs as an IT specialist. Some of my specialties include (but are not limited to): GTD, Azure, Office 365, DNS, Linux, Windows, monitoring, DNS, ..
-Some of the things I&amp;rsquo;m working with:  Microsoft Azure, Office 365 Nagios, Check_MK Odoo SaltStack x2go Git</description>
     </item>
     
   </channel>
