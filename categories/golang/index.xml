@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on @harkx</title>
-    <link>/categories/golang/</link>
+    <link>https://harkx.com/categories/golang/</link>
     <description>Recent content in Golang on @harkx</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Feb 2015 19:26:59 +0100</lastBuildDate>
     
-	<atom:link href="/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://harkx.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Go, build for a different architecture</title>
-      <link>/post/go/go-build-different-arch/</link>
+      <link>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</link>
       <pubDate>Mon, 23 Feb 2015 19:26:59 +0100</pubDate>
       
-      <guid>/post/go/go-build-different-arch/</guid>
+      <guid>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</guid>
       <description>It happened that I needed to (re)build a small program for an i386 machine. This was about the same time I realized we still had those&amp;hellip; It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I wanted to document it.
 First of all, build the correct Go compiler. I&amp;rsquo;m on (Ubuntu) amd64 and these instructions explain how to get the i386 build. (you can replace all (i)386 with amd64 to do the reverse.</description>
     </item>
