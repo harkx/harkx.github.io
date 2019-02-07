@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://harkx.com/links/</loc>
+    <lastmod>2019-01-01T01:01:01+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://harkx.com/about/</loc>
+    <lastmod>2019-01-01T01:01:01+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://harkx.com/blog/2016/09/25/vmware-vsphere-client-downloads/</loc>
     <lastmod>2016-09-25T13:34:41+02:00</lastmod>
   </url>
@@ -38,16 +48,8 @@
   </url>
   
   <url>
-    <loc>https://harkx.com/links/</loc>
-  </url>
-  
-  <url>
-    <loc>https://harkx.com/about/</loc>
-  </url>
-  
-  <url>
     <loc>https://harkx.com/</loc>
-    <lastmod>2016-09-25T13:34:41+02:00</lastmod>
+    <lastmod>2019-01-01T01:01:01+02:00</lastmod>
     <priority>0</priority>
   </url>
   
