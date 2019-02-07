@@ -17,10 +17,11 @@
       <pubDate>Wed, 11 Feb 2015 21:30:00 +0100</pubDate>
       
       <guid>https://harkx.com/blog/2015/02/11/useful-git-commands/</guid>
-      <description>Here are some Git commands I frequently use, together with a short explanation.
-Also, I don&amp;rsquo;t like to type long commands but I don&amp;rsquo;t mind fancy results. No problem, aliases to the rescue!
-And last (but not least) is a list of some fine Git resources.
-Git reset Reset uncommited changes and go back to HEAD. It discards all uncommitted changes! Be careful, potentially dangerous, this throws away all your uncommitted changes!</description>
+      <description>&lt;p&gt;Here are some Git commands I frequently use, together with a short explanation.&lt;/p&gt;
+
+&lt;p&gt;Also, I don&amp;rsquo;t like to type long commands but I don&amp;rsquo;t mind &lt;strong&gt;fancy results&lt;/strong&gt;. No problem, aliases to the rescue!&lt;/p&gt;
+
+&lt;p&gt;And last (but not least) is a list of some fine Git resources.&lt;/p&gt;</description>
     </item>
     
   </channel>

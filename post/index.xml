@@ -17,8 +17,7 @@
       <pubDate>Sun, 25 Sep 2016 13:34:41 +0200</pubDate>
       
       <guid>https://harkx.com/blog/2016/09/25/vmware-vsphere-client-downloads/</guid>
-      <description>For future reference, here are all the VMware vSphere Client downloads:
- Download URLs for vSphere Client  written by @harkx</description>
+      <description>&lt;p&gt;For future reference, here are all the VMware vSphere Client downloads.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,10 +26,9 @@
       <pubDate>Sun, 27 Dec 2015 06:57:14 +0100</pubDate>
       
       <guid>https://harkx.com/blog/2015/12/27/running-odoo-with-https/</guid>
-      <description>It has gotten so easy to use https since https://letsencrypt.org/ opened up. Not only can you get free ssl certificates but even more important, automate the process! That&amp;rsquo;s how it should be!
-I&amp;rsquo;m using Caddy. I&amp;rsquo;m assuming your Odoo server is already running. (for example, on 127.0.0.1:8069)
-Also important, some requirements:
- DNS is configured correctly, pointing to your (Caddy/Odoo) server  If incorrect, generating the certificates will not work!</description>
+      <description>&lt;p&gt;It has gotten so easy to use https since &lt;a href=&#34;https://letsencrypt.org/&#34; target=&#34;_blank&#34;&gt;https://letsencrypt.org/&lt;/a&gt; opened up.
+Not only can you get free ssl certificates but even more important, &lt;strong&gt;automate&lt;/strong&gt;
+the process! That&amp;rsquo;s how it should be!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39,8 +37,9 @@ Also important, some requirements:
       <pubDate>Mon, 23 Feb 2015 19:26:59 +0100</pubDate>
       
       <guid>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</guid>
-      <description>It happened that I needed to (re)build a small program for an i386 machine. This was about the same time I realized we still had those&amp;hellip; It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I wanted to document it.
-First of all, build the correct Go compiler. I&amp;rsquo;m on (Ubuntu) amd64 and these instructions explain how to get the i386 build. (you can replace all (i)386 with amd64 to do the reverse.</description>
+      <description>&lt;p&gt;It happened that I needed to (re)build a small program for an i386 machine.
+This was about the same time I realized we still had those&amp;hellip;
+It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I wanted to document it.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -49,9 +48,7 @@ First of all, build the correct Go compiler. I&amp;rsquo;m on (Ubuntu) amd64 and
       <pubDate>Thu, 12 Feb 2015 19:40:47 +0100</pubDate>
       
       <guid>https://harkx.com/blog/2015/02/12/cheat-sheets/</guid>
-      <description>The homepage of Cheatography not only has a nice collection but you can also generate and share your own cheat sheets.
-Some of my favorites:
- tmux - the best terminal multiplexer rsync - a pretty long list bash - Bash Linux command line keyboard shortcuts perlcheat - for beginning Perl programmers holiday/vacations - enjoy your trip..   written by @harkx</description>
+      <description>&lt;p&gt;The homepage of &lt;strong&gt;&lt;a href=&#34;http://www.cheatography.com/&#34; target=&#34;_blank&#34;&gt;Cheatography&lt;/a&gt;&lt;/strong&gt; not only has a nice collection but you can also generate and share your own cheat sheets.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -60,10 +57,11 @@ Some of my favorites:
       <pubDate>Wed, 11 Feb 2015 21:30:00 +0100</pubDate>
       
       <guid>https://harkx.com/blog/2015/02/11/useful-git-commands/</guid>
-      <description>Here are some Git commands I frequently use, together with a short explanation.
-Also, I don&amp;rsquo;t like to type long commands but I don&amp;rsquo;t mind fancy results. No problem, aliases to the rescue!
-And last (but not least) is a list of some fine Git resources.
-Git reset Reset uncommited changes and go back to HEAD. It discards all uncommitted changes! Be careful, potentially dangerous, this throws away all your uncommitted changes!</description>
+      <description>&lt;p&gt;Here are some Git commands I frequently use, together with a short explanation.&lt;/p&gt;
+
+&lt;p&gt;Also, I don&amp;rsquo;t like to type long commands but I don&amp;rsquo;t mind &lt;strong&gt;fancy results&lt;/strong&gt;. No problem, aliases to the rescue!&lt;/p&gt;
+
+&lt;p&gt;And last (but not least) is a list of some fine Git resources.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -72,8 +70,7 @@ Git reset Reset uncommited changes and go back to HEAD. It discards all uncommit
       <pubDate>Sun, 08 Feb 2015 19:00:00 +0100</pubDate>
       
       <guid>https://harkx.com/blog/2015/02/08/first-post-with-hugo/</guid>
-      <description>I was a little bored with the previous look and decided to play around with some other static HTML generators. I did like that I could edit the website directly in GitHub but I still decided to move away from the current setup with &amp;ldquo;Jekyll Now&amp;rdquo;. It&amp;rsquo;s more fun to edit files in atom anyway.
-I&amp;rsquo;ve been playing with Go lately and decided to look for a static HTML generator in Go.</description>
+      <description>&lt;p&gt;I was a little &lt;em&gt;bored&lt;/em&gt; with the previous look and decided to play around with some other static HTML generators. I did like that I could edit the website directly in GitHub but I still decided to move away from the current setup with &amp;ldquo;Jekyll Now&amp;rdquo;. It&amp;rsquo;s more fun to edit files in &lt;a href=&#34;https://atom.io/&#34; target=&#34;_blank&#34;&gt;atom&lt;/a&gt; anyway.&lt;/p&gt;</description>
     </item>
     
   </channel>

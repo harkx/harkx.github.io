@@ -17,8 +17,7 @@
       <pubDate>Sun, 25 Sep 2016 13:34:41 +0200</pubDate>
       
       <guid>https://harkx.com/blog/2016/09/25/vmware-vsphere-client-downloads/</guid>
-      <description>For future reference, here are all the VMware vSphere Client downloads:
- Download URLs for vSphere Client  written by @harkx</description>
+      <description>&lt;p&gt;For future reference, here are all the VMware vSphere Client downloads.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,10 +26,9 @@
       <pubDate>Sun, 27 Dec 2015 06:57:14 +0100</pubDate>
       
       <guid>https://harkx.com/blog/2015/12/27/running-odoo-with-https/</guid>
-      <description>It has gotten so easy to use https since https://letsencrypt.org/ opened up. Not only can you get free ssl certificates but even more important, automate the process! That&amp;rsquo;s how it should be!
-I&amp;rsquo;m using Caddy. I&amp;rsquo;m assuming your Odoo server is already running. (for example, on 127.0.0.1:8069)
-Also important, some requirements:
- DNS is configured correctly, pointing to your (Caddy/Odoo) server  If incorrect, generating the certificates will not work!</description>
+      <description>&lt;p&gt;It has gotten so easy to use https since &lt;a href=&#34;https://letsencrypt.org/&#34; target=&#34;_blank&#34;&gt;https://letsencrypt.org/&lt;/a&gt; opened up.
+Not only can you get free ssl certificates but even more important, &lt;strong&gt;automate&lt;/strong&gt;
+the process! That&amp;rsquo;s how it should be!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39,8 +37,7 @@ Also important, some requirements:
       <pubDate>Sun, 08 Feb 2015 19:00:00 +0100</pubDate>
       
       <guid>https://harkx.com/blog/2015/02/08/first-post-with-hugo/</guid>
-      <description>I was a little bored with the previous look and decided to play around with some other static HTML generators. I did like that I could edit the website directly in GitHub but I still decided to move away from the current setup with &amp;ldquo;Jekyll Now&amp;rdquo;. It&amp;rsquo;s more fun to edit files in atom anyway.
-I&amp;rsquo;ve been playing with Go lately and decided to look for a static HTML generator in Go.</description>
+      <description>&lt;p&gt;I was a little &lt;em&gt;bored&lt;/em&gt; with the previous look and decided to play around with some other static HTML generators. I did like that I could edit the website directly in GitHub but I still decided to move away from the current setup with &amp;ldquo;Jekyll Now&amp;rdquo;. It&amp;rsquo;s more fun to edit files in &lt;a href=&#34;https://atom.io/&#34; target=&#34;_blank&#34;&gt;atom&lt;/a&gt; anyway.&lt;/p&gt;</description>
     </item>
     
   </channel>

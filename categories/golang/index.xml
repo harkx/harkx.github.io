@@ -17,8 +17,9 @@
       <pubDate>Mon, 23 Feb 2015 19:26:59 +0100</pubDate>
       
       <guid>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</guid>
-      <description>It happened that I needed to (re)build a small program for an i386 machine. This was about the same time I realized we still had those&amp;hellip; It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I wanted to document it.
-First of all, build the correct Go compiler. I&amp;rsquo;m on (Ubuntu) amd64 and these instructions explain how to get the i386 build. (you can replace all (i)386 with amd64 to do the reverse.</description>
+      <description>&lt;p&gt;It happened that I needed to (re)build a small program for an i386 machine.
+This was about the same time I realized we still had those&amp;hellip;
+It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I wanted to document it.&lt;/p&gt;</description>
     </item>
     
   </channel>
