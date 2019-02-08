@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on @harkx</title>
-    <link>https://harkx.bitbucket.io/categories/golang/</link>
+    <link>https://harkx.com/categories/golang/</link>
     <description>Recent content in Golang on @harkx</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Feb 2015 19:26:59 +0100</lastBuildDate>
     
-	<atom:link href="https://harkx.bitbucket.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://harkx.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Go, build for a different architecture</title>
-      <link>https://harkx.bitbucket.io/blog/2015/02/23/go-build-for-a-different-architecture/</link>
+      <link>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</link>
       <pubDate>Mon, 23 Feb 2015 19:26:59 +0100</pubDate>
       
-      <guid>https://harkx.bitbucket.io/blog/2015/02/23/go-build-for-a-different-architecture/</guid>
+      <guid>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</guid>
       <description>&lt;p&gt;It happened that I needed to (re)build a small program for an i386 machine.
 This was about the same time I realized we still had those&amp;hellip;
 It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I wanted to document it.&lt;/p&gt;</description>

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>@harkx</title>
-    <link>https://harkx.bitbucket.io/</link>
+    <link>https://harkx.com/</link>
     <description>Recent content on @harkx</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Jan 2019 01:01:01 +0200</lastBuildDate>
     
-	<atom:link href="https://harkx.bitbucket.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://harkx.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>#links</title>
-      <link>https://harkx.bitbucket.io/links/</link>
+      <link>https://harkx.com/links/</link>
       <pubDate>Tue, 01 Jan 2019 01:01:01 +0200</pubDate>
       
-      <guid>https://harkx.bitbucket.io/links/</guid>
+      <guid>https://harkx.com/links/</guid>
       <description>A collection of (some of) my frequently used links. Azure  Azure Backup agent - Download the latest Azure Backup agent Azure status - Azure status dashboard  DNS  intoDNS - Check DNS health World Wide Web Domain Tools by ITOC Australia - DNS and Web tools  Linux  Debian CD Image Archive - Where the older CD/DVD releases of Debian are stored. Planet Debian - Planet Debian tmux and screen cheatsheet - A screen and tmux cheatsheet tmux cheatsheet - tmux cheatsheet tmux Crash Course tmux Crash course  Security  Let&amp;rsquo;s Encrypt - Certificate Authority for your SSL needs: free, automated and open!</description>
     </item>
     
     <item>
       <title>#whoami</title>
-      <link>https://harkx.bitbucket.io/about/</link>
+      <link>https://harkx.com/about/</link>
       <pubDate>Tue, 01 Jan 2019 01:01:01 +0200</pubDate>
       
-      <guid>https://harkx.bitbucket.io/about/</guid>
+      <guid>https://harkx.com/about/</guid>
       <description>I am Kristof Hardy. Passionate about travel, information technology and automation (http://en.wikipedia.org/wiki/Automation) in all its aspects, living in the eastern part of Flemish Brabant (http://en.wikipedia.org/wiki/Flemish_Brabant) in Belgium.
 
 I’m working at Cats&amp;amp;Dogs as an IT specialist. Some of my specialties include (but are not limited to): GTD, Azure, Office 365, DNS, Linux, Windows, monitoring, DNS, ..
@@ -34,19 +34,19 @@ Some of the things I&amp;rsquo;m working with:  Microsoft Azure, Office 365 Nagi
     
     <item>
       <title>VMware vSphere Client downloads</title>
-      <link>https://harkx.bitbucket.io/blog/2016/09/25/vmware-vsphere-client-downloads/</link>
+      <link>https://harkx.com/blog/2016/09/25/vmware-vsphere-client-downloads/</link>
       <pubDate>Sun, 25 Sep 2016 13:34:41 +0200</pubDate>
       
-      <guid>https://harkx.bitbucket.io/blog/2016/09/25/vmware-vsphere-client-downloads/</guid>
+      <guid>https://harkx.com/blog/2016/09/25/vmware-vsphere-client-downloads/</guid>
       <description>&lt;p&gt;For future reference, here are all the VMware vSphere Client downloads.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Running Odoo with https</title>
-      <link>https://harkx.bitbucket.io/blog/2015/12/27/running-odoo-with-https/</link>
+      <link>https://harkx.com/blog/2015/12/27/running-odoo-with-https/</link>
       <pubDate>Sun, 27 Dec 2015 06:57:14 +0100</pubDate>
       
-      <guid>https://harkx.bitbucket.io/blog/2015/12/27/running-odoo-with-https/</guid>
+      <guid>https://harkx.com/blog/2015/12/27/running-odoo-with-https/</guid>
       <description>&lt;p&gt;It has gotten so easy to use https since &lt;a href=&#34;https://letsencrypt.org/&#34; target=&#34;_blank&#34;&gt;https://letsencrypt.org/&lt;/a&gt; opened up.
 Not only can you get free ssl certificates but even more important, &lt;strong&gt;automate&lt;/strong&gt;
 the process! That&amp;rsquo;s how it should be!&lt;/p&gt;</description>
@@ -54,10 +54,10 @@ the process! That&amp;rsquo;s how it should be!&lt;/p&gt;</description>
     
     <item>
       <title>Go, build for a different architecture</title>
-      <link>https://harkx.bitbucket.io/blog/2015/02/23/go-build-for-a-different-architecture/</link>
+      <link>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</link>
       <pubDate>Mon, 23 Feb 2015 19:26:59 +0100</pubDate>
       
-      <guid>https://harkx.bitbucket.io/blog/2015/02/23/go-build-for-a-different-architecture/</guid>
+      <guid>https://harkx.com/blog/2015/02/23/go-build-for-a-different-architecture/</guid>
       <description>&lt;p&gt;It happened that I needed to (re)build a small program for an i386 machine.
 This was about the same time I realized we still had those&amp;hellip;
 It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I wanted to document it.&lt;/p&gt;</description>
@@ -65,19 +65,19 @@ It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I want
     
     <item>
       <title>Cheat Sheets</title>
-      <link>https://harkx.bitbucket.io/blog/2015/02/12/cheat-sheets/</link>
+      <link>https://harkx.com/blog/2015/02/12/cheat-sheets/</link>
       <pubDate>Thu, 12 Feb 2015 19:40:47 +0100</pubDate>
       
-      <guid>https://harkx.bitbucket.io/blog/2015/02/12/cheat-sheets/</guid>
+      <guid>https://harkx.com/blog/2015/02/12/cheat-sheets/</guid>
       <description>&lt;p&gt;The homepage of &lt;strong&gt;&lt;a href=&#34;http://www.cheatography.com/&#34; target=&#34;_blank&#34;&gt;Cheatography&lt;/a&gt;&lt;/strong&gt; not only has a nice collection but you can also generate and share your own cheat sheets.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Useful git commands</title>
-      <link>https://harkx.bitbucket.io/blog/2015/02/11/useful-git-commands/</link>
+      <link>https://harkx.com/blog/2015/02/11/useful-git-commands/</link>
       <pubDate>Wed, 11 Feb 2015 21:30:00 +0100</pubDate>
       
-      <guid>https://harkx.bitbucket.io/blog/2015/02/11/useful-git-commands/</guid>
+      <guid>https://harkx.com/blog/2015/02/11/useful-git-commands/</guid>
       <description>&lt;p&gt;Here are some Git commands I frequently use, together with a short explanation.&lt;/p&gt;
 
 &lt;p&gt;Also, I don&amp;rsquo;t like to type long commands but I don&amp;rsquo;t mind &lt;strong&gt;fancy results&lt;/strong&gt;. No problem, aliases to the rescue!&lt;/p&gt;
@@ -87,19 +87,19 @@ It&amp;rsquo;s very easy but since I&amp;rsquo;ll not be using this a lot I want
     
     <item>
       <title>First post with Hugo</title>
-      <link>https://harkx.bitbucket.io/blog/2015/02/08/first-post-with-hugo/</link>
+      <link>https://harkx.com/blog/2015/02/08/first-post-with-hugo/</link>
       <pubDate>Sun, 08 Feb 2015 19:00:00 +0100</pubDate>
       
-      <guid>https://harkx.bitbucket.io/blog/2015/02/08/first-post-with-hugo/</guid>
+      <guid>https://harkx.com/blog/2015/02/08/first-post-with-hugo/</guid>
       <description>&lt;p&gt;I was a little &lt;em&gt;bored&lt;/em&gt; with the previous look and decided to play around with some other static HTML generators. I did like that I could edit the website directly in GitHub but I still decided to move away from the current setup with &amp;ldquo;Jekyll Now&amp;rdquo;. It&amp;rsquo;s more fun to edit files in &lt;a href=&#34;https://atom.io/&#34; target=&#34;_blank&#34;&gt;atom&lt;/a&gt; anyway.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>License</title>
-      <link>https://harkx.bitbucket.io/license/</link>
+      <link>https://harkx.com/license/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://harkx.bitbucket.io/license/</guid>
+      <guid>https://harkx.com/license/</guid>
       <description>Content license All non-code blog content is licensed under Creative Commons BY-SA 4.0.
 Code license All source code files and snippets found on this blog, unless otherwise explicitly noted, are licensed under the terms below.
 Copyright 2015 Kristof Hardy Licensed under the Apache License, Version 2.0 (the &amp;quot;License&amp;quot;); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.</description>
