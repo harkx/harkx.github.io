@@ -6,10 +6,19 @@
     <description>Recent content in General on @harkx</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Sep 2016 13:34:41 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 08 Feb 2019 16:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://harkx.com/categories/general/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows battery report</title>
+      <link>https://harkx.com/blog/2019/02/08/windows-battery-report/</link>
+      <pubDate>Fri, 08 Feb 2019 16:00:00 +0200</pubDate>
+      
+      <guid>https://harkx.com/blog/2019/02/08/windows-battery-report/</guid>
+      <description>&lt;p&gt;Some tips are awesome, got this one from a colleague.. How to check the battery of your laptop? (health, runtime, &amp;hellip;)&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>VMware vSphere Client downloads</title>

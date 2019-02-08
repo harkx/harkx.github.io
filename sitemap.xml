@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://harkx.com/blog/2019/02/08/windows-battery-report/</loc>
+    <lastmod>2019-02-08T16:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://harkx.com/links/</loc>
     <lastmod>2019-01-01T01:01:01+02:00</lastmod>
   </url>
@@ -49,7 +54,7 @@
   
   <url>
     <loc>https://harkx.com/</loc>
-    <lastmod>2019-01-01T01:01:01+02:00</lastmod>
+    <lastmod>2019-02-08T16:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -66,7 +71,7 @@
   
   <url>
     <loc>https://harkx.com/categories/general/</loc>
-    <lastmod>2016-09-25T13:34:41+02:00</lastmod>
+    <lastmod>2019-02-08T16:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -84,13 +89,13 @@
   
   <url>
     <loc>https://harkx.com/post/</loc>
-    <lastmod>2016-09-25T13:34:41+02:00</lastmod>
+    <lastmod>2019-02-08T16:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://harkx.com/categories/sysadmin/</loc>
-    <lastmod>2016-09-25T13:34:41+02:00</lastmod>
+    <lastmod>2019-02-08T16:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
