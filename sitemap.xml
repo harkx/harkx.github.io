@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://harkx.com/blog/2019/02/11/azure-resources/</loc>
+    <lastmod>2019-02-11T20:32:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://harkx.com/blog/2019/02/08/windows-battery-report/</loc>
     <lastmod>2019-02-08T16:00:00+02:00</lastmod>
   </url>
@@ -54,12 +59,19 @@
   
   <url>
     <loc>https://harkx.com/</loc>
-    <lastmod>2019-02-08T16:00:00+02:00</lastmod>
+    <lastmod>2019-02-11T20:32:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://harkx.com/categories/azure/</loc>
+    <lastmod>2019-02-11T20:32:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://harkx.com/categories/</loc>
+    <lastmod>2019-02-11T20:32:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -89,7 +101,7 @@
   
   <url>
     <loc>https://harkx.com/post/</loc>
-    <lastmod>2019-02-08T16:00:00+02:00</lastmod>
+    <lastmod>2019-02-11T20:32:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
