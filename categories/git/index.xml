@@ -1,28 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Git on @harkx</title>
-    <link>https://harkx.com/categories/git/</link>
-    <description>Recent content in Git on @harkx</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 11 Feb 2015 21:30:00 +0100</lastBuildDate>
-    
-	<atom:link href="https://harkx.com/categories/git/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Useful git commands</title>
-      <link>https://harkx.com/blog/2015/02/11/useful-git-commands/</link>
-      <pubDate>Wed, 11 Feb 2015 21:30:00 +0100</pubDate>
-      
-      <guid>https://harkx.com/blog/2015/02/11/useful-git-commands/</guid>
-      <description>&lt;p&gt;Here are some Git commands I frequently use, together with a short explanation.&lt;/p&gt;
-
-&lt;p&gt;Also, I don&amp;rsquo;t like to type long commands but I don&amp;rsquo;t mind &lt;strong&gt;fancy results&lt;/strong&gt;. No problem, aliases to the rescue!&lt;/p&gt;
-
-&lt;p&gt;And last (but not least) is a list of some fine Git resources.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on @harkx</title><link>https://harkx.com/categories/git/</link><description>Recent content in git on @harkx</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 11 Feb 2015 21:30:00 +0100</lastBuildDate><atom:link href="https://harkx.com/categories/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Useful git commands</title><link>https://harkx.com/blog/2015/02/11/useful-git-commands/</link><pubDate>Wed, 11 Feb 2015 21:30:00 +0100</pubDate><guid>https://harkx.com/blog/2015/02/11/useful-git-commands/</guid><description>&lt;p>Here are some Git commands I frequently use, together with a short explanation.&lt;/p>
+&lt;p>Also, I don&amp;rsquo;t like to type long commands but I don&amp;rsquo;t mind &lt;strong>fancy results&lt;/strong>. No problem, aliases to the rescue!&lt;/p>
+&lt;p>And last (but not least) is a list of some fine Git resources.&lt;/p></description></item></channel></rss>
